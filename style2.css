@@ -1,0 +1,73 @@
+*{
+   
+    
+    
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    background-image: url(img/F7.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.box{
+    
+    position: fixed;
+    left: 12CM;
+    TOP:3.5CM;
+    justify-content: center;
+    align-items: center;
+    min-height: 510px;
+}
+.container{
+    width: 350px;
+
+    padding: 0 15PX 0 15px;
+}
+header{
+   color: #fff;
+   font-size: 35px;
+    text-align: center;
+   letter-spacing: 7px;
+   padding: 10px 0 10px 0;
+}
+.input{
+    height: 45px;
+    width: 80%;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    color: #fff;
+    margin-top: 15px;
+    padding: 0 0 0 40px;
+    background: rgba(250, 250, 250, 0.3);
+}
+
+::-webkit-input-placeholder{
+    color: #fff;
+}
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    width: 95%;
+    margin-top: 15px;
+    background: rgba(250, 250, 250, 0.7);
+    cursor: pointer;
+    transition: .3s ;
+    box-shadow:10px 10px 12px 1px rgb(0, 0, 0, 0.2) ;
+}
+
+.submit:hover{
+    box-shadow:none ;
+}
+.bottom{
+    font-size: small;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 16px;
+}
+
+

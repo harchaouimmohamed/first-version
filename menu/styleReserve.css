@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+
+
+
+.center {
+  width: 100%;
+  height:  100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute; 
+  right: 0; 
+  bottom: 0;
+  position: fixed;
+  
+}
+
+
+
+
+.popupForm{
+  position: relative;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.308);
+  width: 100%;
+  height:  100vh;
+  z-index: 20;
+ 
+  align-items: center;
+  justify-content: center;
+ 
+  right: 0; 
+  bottom: 0;
+  z-index: 500;
+  display: none;
+  
+}
+
+.popupForm.active{
+  display: flex;
+}
+.popup-content2{
+  
+  width: 90%;
+  
+  height: 90%;
+  background:#fff;
+  box-sizing: border-box;
+  border-radius: 5mm;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: poppins;
+  position:absolute;
+
+  text-align: center;
+  box-shadow: 5px 5px 9px 6px rgb(0, 0, 0, 0.2);
+
+  
+}
+.headForm{
+
+  background: rgb(194, 0, 34);
+  border-top-left-radius: 5mm; 
+  border-top-right-radius: 5mm; 
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.closeForm {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  z-index: 10;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+  
+  .closeForm:hover,
+  .closeForm:focus {
+    color: rgb(255, 253, 253);
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 10;
+    background: #ffffff3b;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  select, input[type="date"], input[type="time"], .buttonForm {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .inputF {
+    display: flex ;
+    justify-content: flex-start ;
+    width: 93% ;
+    padding: 5px ;
+    height: 40px ;
+    border: 0.3px solid #ccc ;
+    border-radius: 8px;
+}
+
+  .titleForm{
+    position: absolute;
+    height: 40px;
+    width: fit-content;
+   text-align: center;
+   top: 0;
+  }
+
+  .titleForm h3{
+
+   position: relative !important;
+    top: 6px !important;
+    display: flex !important;
+    justify-content: center !important;
+    font-size: 25px !important; 
+    font-weight: 700 !important;
+    font-family: "Caveat", sans-serif !important;
+    align-items: center;
+    
+  }
+
+ 
+
+
+.select-menuForm {
+  position: absolute;
+  top: 52px;
+  width: 100%;
+
+  color: #fff;
+  background: #fff;
+  height: 459px;
+  overflow: auto;
+  border-radius: 5mm;
+  display: flex;
+}
+
+
+.select-menuForm::-webkit-scrollbar {
+  width: 5px;
+   
+  border-radius: 5px;
+  scrollbar-width: thin;
+}
+
+.select-menuForm::-webkit-scrollbar-thumb {
+  background: #e86565e1;
+  border-radius: 10px; 
+}
+.select-menuForm::-webkit-scrollbar-corner {
+  background: transparent; 
+}
+
+
+.select-menuForm::-webkit-scrollbar-track {
+  background: #f1f1f109; 
+}
+
+
+.select-menuForm::-webkit-scrollbar-thumb {
+  background: #e86565e1;
+}
+
+
+.select-menuForm::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+
+
+.contactForm,
+.reservation {
+   
+  padding: 1px; 
+}
+
+.contactForm {
+  position: relative;
+  height: 100%;
+  flex: 60%;
+  
+   width: 60%;
+   color: #000;
+   display: flex; 
+   justify-content: center; 
+  
+}
+
+
+
+.box1 {
+  width: 85%;
+  position: absolute;
+  height: 180px;
+ 
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+ margin-top: 90px;
+ margin-right: 20px;
+
+}
+.box2 {
+  width: 85%;
+  position: absolute;
+  height: 180px;
+
+  display: grid;
+  grid-template-columns: 1fr; 
+ margin-top: 263px;
+ margin-right: 20px;
+
+}
+.box2 input{
+  width: 98%;
+
+}
+
+.icon{
+  position: relative;
+}
+.icon input{
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+}
+.icon span {
+  position: absolute;
+  left: 3px; 
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  
+}
+.contct{
+  background: #000;
+  display: flex;
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  
+  justify-content: flex-start;
+}
+.contct span {
+  position: absolute;
+  margin-right: 5px;
+  left: 3px; 
+  font-size: 16px;
+  margin-top: 23px;
+  margin-left: 26px;
+  font-weight: bold;
+}
+
+.contct h4 {
+  position: absolute;
+  margin-right: 5px;
+  left: 27px; 
+  margin-left: 30px;
+  font-size: 25px;
+  margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  color: #000;
+  font-weight: bold;
+}
+
+
+label {
+  display: flex;
+  justify-content: flex-start;
+  color: #fff; 
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+
+}
+
+.inputForm {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  padding: 5px;
+  height: 28px; 
+  border: 0.3px solid #ccc;
+  border-radius: 8px;
+}
+.boxInput{
+  margin-top: 10px;
+}
+
+.boxInputradio{
+  width: 80%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  
+}
+
+.radio-buttons {
+  display: flex;
+   
+}
+
+.radio-buttons input{
+  width: 50% !important;
+  transform: scale(0.8);
+}
+
+.radio-buttons input[type="radio"],
+.radio-buttons label {
+  margin-right: 10px; 
+}
+.radio-buttons label {
+  margin-right: 10px !important; 
+  margin-top: 7px;
+}
+
+.comment{
+  height: 57px;
+}
+
+.checkbox-group {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  align-content: center;
+ 
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  color: #333;
+  white-space: nowrap;
+  margin-top: 10px;
+  
+  font-size: 14px;
+  cursor: pointer;
+}
+.chek{
+  position: absolute;
+ 
+  top: 200px;
+  width: 85%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ 
+}
+
+.checkbox-group {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  
+}
+
+
+.reserveButton {
+  position: absolute;
+  margin-left: 20px;
+  
+  position: absolute;
+  top: calc(318px + 180px + 100px); 
+  left: 0;
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reserveButton button {
+  width: 45%;
+  height: 50px;
+  
+  background-color: rgb(255, 222, 89);
+  color: #000;
+  border: none;
+  font-family: "Madimi One", sans-serif;
+  
+  font-size: 29px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.reservation {
+  position: relative;
+  flex: 40%;
+ background: none;
+
+ display: flex;
+ justify-content: center;
+}
+
+.reserveinfo{
+  position: sticky;
+  top: 20px;
+  width: 80%;
+  height: 200px;
+  background: #ededed;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  box-sizing: border-box;
+
+}
+
+.reserveHead{
+  width: 99%;
+  height: 30%;
+  
+  color: #000;
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 10px;
+  margin-top: 20px;
+  
+}
+
+.reserveHead h3 {
+  position: relative;
+  margin-right: 70px; 
+  margin-left: 20px;
+  display: inline;
+  left: 0;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.reserveHead a {
+  font-family: "Montserrat", sans-serif;
+  margin-left: 26px;
+  display: inline; 
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.reserveContent {
+  position: relative;
+  width: 99%;
+  height: 60%;
+  
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 64px; 
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.guest{
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+
+}
+.calendarForm{
+  margin-top: 10px;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  position: absolute;
+  top: 40px;
+  left: 15px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.hore{
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  position: absolute;
+  top: 80px;
+  margin-top: 10px;
+  left: 15px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+
+}
+.colon{
+  margin-right: 14px;
+}

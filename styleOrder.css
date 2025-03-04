@@ -1,0 +1,863 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+
+
+
+.center {
+  width: 100%;
+  height:  100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  right: 0; 
+  bottom: 0;
+  position: fixed;
+  
+}
+
+
+
+
+.FormOrder{
+  position: relative;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.308);
+  width: 100%;
+  height:  100vh;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  display: none;
+  
+}
+
+.FormOrder.active{
+  display: flex;
+}
+.popup-content3{
+
+  width: 90%;
+
+  height: 90%;
+  background:#fff;
+  box-sizing: border-box;
+  border-radius: 5mm;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: poppins;
+  position:absolute;
+
+  text-align: center;
+  box-shadow: 5px 5px 9px 6px rgb(0, 0, 0, 0.2);
+
+  
+}
+.headForm{
+ 
+  background: rgb(194, 0, 34);
+  border-top-left-radius: 5mm; 
+  border-top-right-radius: 5mm; 
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  
+}
+
+.closeOrder {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  z-index: 10;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+  
+  .closeOrder:hover,
+  .closeOrder:focus {
+    color: rgb(255, 253, 253);
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 10;
+    background: #ffffff3b;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  select, input[type="date"], input[type="time"], .buttonForm {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .inputF {
+    display: flex ;
+    justify-content: flex-start ;
+    width: 93% ;
+    padding: 5px ;
+    height: 40px ;
+    border: 0.3px solid #ccc ;
+    border-radius: 8px;
+}
+
+  .titleForm{
+    position: absolute;
+    height: 40px;
+    width: fit-content;
+   text-align: center;
+   top: 0;
+  }
+
+  .titleForm h3{
+
+   position: relative !important;
+    top: 6px !important;
+    display: flex !important;
+    justify-content: center !important;
+    font-size: 25px !important; 
+    font-weight: 700 !important;
+    font-family: "Caveat", sans-serif !important;
+    align-items: center;
+    
+  }
+
+ 
+
+
+.select-menuForm {
+  position: absolute;
+  top: 52px;
+  width: 100%;
+
+  color: #fff;
+  background: #fff;
+  height: 459px;
+  overflow: auto;
+  border-radius: 5mm;
+  display: flex;
+}
+
+
+.select-menuForm::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 5px;
+  scrollbar-width: thin;
+}
+
+.select-menuForm::-webkit-scrollbar-thumb {
+  background: #e86565e1; 
+  border-radius: 10px;
+}
+.select-menuForm::-webkit-scrollbar-corner {
+  background: transparent; 
+}
+
+.select-menuForm::-webkit-scrollbar-track {
+  background: #f1f1f109;
+}
+
+.select-menuForm::-webkit-scrollbar-thumb {
+  background: #e86565e1;
+}
+
+.select-menuForm::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+
+
+.contactForm,
+.reservation {
+   
+  padding: 1px; 
+}
+
+.contactForm {
+  position: relative;
+  height: 100%;
+  flex: 60%;
+
+   width: 60%;
+   color: #000;
+   display: flex; 
+   justify-content: center; 
+  
+}
+
+
+
+.box1 {
+  width: 85%;
+  position: absolute;
+  height: 180px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ margin-top: 90px;
+ margin-right: 20px;
+
+}
+.box2 {
+  width: 85%;
+  position: absolute;
+  height: 180px;
+ 
+  display: grid;
+  grid-template-columns: 1fr; 
+ margin-top: 263px;
+ margin-right: 20px;
+
+}
+.box2 input{
+  width: 98%;
+
+}
+
+.icon{
+  position: relative;
+}
+.icon input{
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+}
+.icon span {
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  
+}
+.contct{
+  background: #000;
+  display: flex;
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  
+  justify-content: flex-start;
+}
+.contct span {
+  position: absolute;
+  margin-right: 5px;
+  left: 3px; 
+  font-size: 16px;
+  margin-top: 23px;
+  margin-left: 26px;
+  font-weight: bold;
+}
+
+.contct h4 {
+  position: absolute;
+  margin-right: 5px;
+  left: 27px; 
+  margin-left: 30px;
+  font-size: 25px;
+  margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3px;
+  color: #000;
+  font-weight: bold;
+}
+
+
+label {
+  display: flex;
+  justify-content: flex-start;
+  color: #fff; 
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+
+}
+
+.inputForm {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+  padding: 5px;
+  height: 28px; 
+  border: 0.3px solid #ccc;
+  border-radius: 8px;
+}
+.boxInput{
+  margin-top: 10px;
+}
+
+.boxInputradio{
+  width: 80%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  
+}
+
+.radio-buttons {
+  display: flex;
+   
+}
+
+.radio-buttons input{
+  width: 50% !important;
+  transform: scale(0.8);
+}
+
+.radio-buttons input[type="radio"],
+.radio-buttons label {
+  margin-right: 10px; 
+}
+.radio-buttons label {
+  margin-right: 10px !important; 
+  margin-top: 7px;
+}
+
+.comment{
+  height: 57px;
+}
+
+.checkbox-group {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  align-content: center;
+ 
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  color: #333;
+  white-space: nowrap;
+  margin-top: 10px;
+
+  font-size: 14px;
+  cursor: pointer;
+}
+.chekOrder{
+  position: absolute;
+
+  top: 376px;
+  width: 85%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ 
+}
+
+.checkbox-group {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  
+}
+
+
+
+.reserveButtonOrder {
+  position: absolute;
+  margin-left: 20px;
+  
+  position: absolute;
+  top: calc(450px + 200px + 140px); 
+  left: 0;
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reserveButtonOrder button {
+  width: 45%;
+  height: 43px;
+  
+  background-color: rgb(255, 222, 89);
+  color: #000;
+  border: none;
+  font-family: "Madimi One", sans-serif;
+  
+  font-size: 29px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.reserveButtonOrder button:hover{
+  background-color: rgba(255, 222, 89, 0.667);
+  cursor: pointer;
+}
+
+.paymentButtonOrder {
+  position: absolute;
+  margin-left: 20px;
+  position: absolute;
+  top: calc(450px + 200px + 140px); 
+  left: 0;
+  width: 98%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.paymentButtonOrder button {
+  width: 40%;
+  height: 40px;
+  
+  background-color: rgba(70, 190, 245, 0.824);
+  color: #000;
+  border: none;
+  font-family: "Madimi One", sans-serif;
+  
+  font-size: 29px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.Orders {
+  position: relative;
+  flex: 40%;
+ background: none;
+
+ display: flex;
+ justify-content: center;
+}
+
+.Orderinfo{
+ 
+  position: absolute;
+  top: 20px;
+  width: 83%;
+  height: 260px;
+  background: #ededed;
+
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  box-sizing: border-box;
+
+}
+
+.OrderHead{
+  width: 99%;
+  height: 28px;
+ 
+  color: #000;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+
+  top: 11px;
+  
+}
+
+.OrderHead h3 {
+  position: absolute;
+
+  display: inline;
+  left: 8px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.OrderHead a {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+ 
+  display: inline;
+  font-weight: 600;
+  cursor: pointer;
+  right: 9px;
+  text-decoration: underline;
+}
+
+.OrderContent {
+  position: relative;
+  width: 99%;
+  height: 181px;
+
+  color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  font-size: 15px;
+  top: 16px;
+  overflow-y: auto;
+}
+.guest{
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+
+}
+.calendarForm{
+  margin-top: 10px;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  position: absolute;
+  top: 40px;
+  left: 15px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.hore{
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  position: absolute;
+  top: 80px;
+  margin-top: 10px;
+  left: 15px;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+
+}
+.colon{
+  margin-right: 14px;
+}
+
+.cart-content2{
+  background: #0000003a;
+
+
+  flex: 0 0 47%;
+  position: relative;
+  display: grid;
+  margin-top: 10px;
+  margin-left: 10px;
+  left: -4px;
+
+  height: 70px;
+  
+  grid-template-rows: 30% 50% ;
+  align-items: center;
+  gap:2px;
+  column-gap: 10px !important;
+ border-radius: 6px;
+  background: #0000001e;
+}
+
+.img-order{
+  position: absolute;
+  top: 5px;
+  border-radius: 5px;
+  width: 70px;
+  height: 86%;
+
+ 
+}
+
+
+.detail-order{
+  position: absolute;
+  left: 51px;
+  top: 5px;
+  width: 62%;
+  height: 95%;
+  display: grid;
+
+  margin-left: 10px;
+}
+
+.product-title{
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 13px;
+  font-weight: 700;
+
+}
+
+.product-quantity{
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+}
+
+.Orderbottom{
+  width: 99%;
+  height: 30px;
+
+  color: #000;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  bottom:4px;
+  border-radius: 20px;
+  
+}
+
+.TotalN{
+  position: absolute;
+  left: 15px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+}
+
+.totalNumber{
+  position: absolute;
+  right: 17px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.PaymentOption{
+  margin-top: 20px;
+
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: row;
+  left: -20px;
+}
+
+.paymentC{
+  position: absolute;
+  left: 20px;
+  top: 6px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 200px;
+  height: 30px;
+ 
+}
+
+
+.paymentL{
+  position: absolute;
+  left: 280px;
+  top: 6px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+ 
+}
+
+.PaymentLabel{
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.paymentCash{
+  width: 20px !important;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.paymentenlign{
+  width: 20px !important;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.payment-options input[type="radio"] {
+  margin-right: 10px;
+}
+
+.payment-options label {
+  margin-bottom: 5px;
+}
+
+/*////////////////////////////////////Payment//////////////////////////////////////////////*/
+.modalPayment{
+  display: none;
+  position: fixed;
+  z-index: 700;
+  padding-top: 60px;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modalPayment.active{
+  display: flex;
+}
+
+.modal-Payment {
+  background-color: #fefefe;
+  position: relative;
+  overflow: hidden;
+
+
+  border: 1px solid #888;
+  width: 450px;
+  height: 312px;
+
+  border-radius: 15px;
+}
+
+.headPayment{
+   position: absolute;
+   top: 1px;
+   left: 0;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+ 
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+ 
+}
+
+.closePayment {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #676565;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.closePayment:hover,
+.closePayment:focus {
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 10;
+  
+}
+
+.titlePayment h3{
+    
+  position: absolute;
+  text-align: center; 
+  top: 12px;
+  left: 3%;
+  margin: 4px;
+  
+ 
+  font-size: 18px;
+  
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+.Payment-body{
+  position: absolute;
+  top: 51px;
+ 
+  height: 274px;
+  border-radius: 5px;
+  width: 100%;
+  overflow: auto;
+}
+
+.TotalPayment{
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 10px;
+  width: 100%;
+  height: 50px;
+  
+  font-family: "Montserrat", sans-serif;
+}
+
+.PayTotal{
+  font-size: large;
+  font-weight: 700;
+  margin-left: 9px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+}
+
+.TotalNumber{
+  font-size: large;
+  font-weight: 600;
+  color: #000;
+  margin-left: 10px;
+}
+
+.PaymentMethod{
+  position: relative;
+  display: flex;
+ 
+  justify-content: center;
+  top: 22px;
+  width: 100%;
+  height: 200px;
+ 
+  font-family: "Montserrat", sans-serif;
+  overflow: auto;
+}
+
+.paymentButton{
+  position: absolute;
+  width: 90%;
+  margin-top: 10px;
+}

@@ -1,0 +1,131 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="shortcut icon" type="x-icon" href="img/Logo Food2.png">
+   <title>login</title>
+   <link rel="shortcut icon" type="x-icon" href="img/Logo Food2.png">
+   <link rel="stylesheet"
+     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+   <link rel="stylesheet" href="paymentOrder.css">
+
+ </head>
+
+ <body>
+   <!-- <form action="" method="post" class="form1">
+        
+        <input type="text" name="resturant_name" placeholder="Resturant Name" required><br>
+        <input type="email" name="resturant_email" placeholder="work Email " required><br>
+        <input type="text" name="phone" placeholder="+213 XXXXXXXXX" pattern="(\+?213|0)([5-7])([0-9]){8}" required><br>
+        <input type="file" name="file" accept=".pdf,.doc,.docx" placeholder="commerce optionel" required><br>
+        <input type="text" name="description" placeholder="Description (Optionale)"><br>
+        <input type="text" name="type" placeholder="Food type" required> <br>
+        <input type="text" value="<?html echo $price; ?>" readonly><br>
+        <input type="submit" name="creat" value="Creat Resturant">
+        <a href="home.html">Annule</a>
+    </form>
+    <br>
+    <form action="" method="post" class="form2">
+        <button type="submit" name="chaing" value="1">1 year</button>
+        <button type="submit" name="chaing" value="2">1 Month</button>
+        <button type="submit" name="chaing" value="3">Premary Month</button>
+
+    </form> -->
+
+
+   <!-- :::::::::::::::::::::::::::::::::create arestaurant:::::::::::::::::::::::: -->
+
+
+   <div id="PayModal" class="modalPayment">
+     <div class="modal-Payment">
+       <div class="headPayment">
+         <!-- <div class="closePayment">
+                  <span class="material-symbols-outlined" id="close-cart">
+                      close
+                      </span>
+              </div> -->
+
+         <div class="titlePayment">
+           <h3 class="titlePay">Payment</h3>
+         </div>
+
+       </div>
+       <div class="Payment-body">
+         <div class="TotalPayment">
+           <p class="PayTotal">Total Payment :<span class="TotalNumber">260 DA</span></p>
+
+         </div>
+         <div class="PaymentMethod">
+           <div id="paypal-container" class="paymentButton"></div>
+
+           <a href="home.html"
+             style=" color: white;text-decoration: none; text-align: center; cursor: pointer; font-weight:800 ; width: 100%; height: 50px; margin:140px 30px ; padding-top: 10px; background-color: #a78b8540;border-radius: 6px; border: 1px solid white;">
+             ANNULE </a>
+
+         </div>
+
+
+
+
+       </div>
+     </div>
+   </div>
+
+
+
+
+
+
+   <script src="javascript/creatrhost.js" defer></script>
+   <script src="javascript/creatrestaurantImage.js"></script>
+   <script src="javascript/script.js"></script>
+   <script src="javascript/creatrestaurantscript.js"></script>
+   <script
+     src="https://www.paypal.com/sdk/js?client-id=ARuAw6HsyBxYOCHKeYVN9o7WAJZbvw4gt7Y1Isn6gs4Uw70r47bfbryfjVK0qDtx0Bce2HK24Qb7rU0E">
+   </script>
+   <script>
+     paypal.Buttons({
+       createOrder: function (data, actions) {
+
+
+
+         var amount = 135;
+         var lamon = Math.round(amount * 100) / 100; // Ensure the amount is rounded to two decimal places
+
+         return actions.order.create({
+           purchase_units: [{
+             amount: {
+               value: lamon.toFixed(2), // Ensuring the amount is in two decimal format
+               currency_code: 'USD'
+             }
+           }]
+         });
+       },
+       onApprove: function (data, actions) {
+         return actions.order.capture().then(function (orderData) {
+           console.log('Capture succeeded:', orderData);
+           var orderId = orderData.id;
+           window.location.href = message_sent;
+         }).catch(function (error) {
+           alert('Somme errure happing tey agine');
+           console.error('Capture failed:', error);
+         });
+       },
+       onError: function (error) {
+         alert('some rong happing in pay methode.');
+         console.error('Error:', error);
+       }
+     }).render('#paypal-container');
+   </script>
+
+
+
+
+
+
+ </body>
+
+ </html>

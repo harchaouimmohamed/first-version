@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Dashboard</title>
+    <link rel="stylesheet" href="systemDashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <img class="logobrand" src="img/Logo Food2.png">
+                        </span>
+                        <span class="title">MealsBox</span>
+                    </a>
+                </li>
+
+
+                <li class="Restaurant">
+                    <a href="#">
+                        <span class="icon">
+                            <span class="material-symbols-outlined">
+                                restaurant
+                            </span>
+                        </span>
+
+                        <span class="title">Restaurant Request</span>
+                    </a>
+                </li>
+                <li class="addHosting">
+                    <a href="#">
+                        <span class="icon">
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                        </span>
+                        <span class="title">Add Hosting</span>
+                    </a>
+                </li>
+
+                <li class="SignOut">
+                    <a href="#">
+                        <span class="icon">
+                            <img class="iconave" src="img/logout.png">
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <img src="img/menu.png">
+                </div>
+
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="search here">
+                        <img src="img/search.png">
+                    </label>
+                </div>
+
+                <div class="user">
+
+                </div>
+            </div>
+
+
+            <div class="cardBox">
+                <div class="cardorder">
+                    <div>
+                        <div class="numbers">1504</div>
+                        <div class="cardName">customers</div>
+                    </div>
+
+                    <div class="iconBox">
+
+                    </div>
+                </div>
+                <div class="cardorder">
+                    <div>
+                        <div class="numbers">98600 DA</div>
+                        <div class="cardName">Sales</div>
+                    </div>
+
+                    <div class="iconBox">
+
+                    </div>
+                </div>
+                <div class="cardorder">
+                    <div>
+                        <div class="numbers">384</div>
+                        <div class="cardName">Restaurants</div>
+                    </div>
+
+                    <div class="iconBox">
+
+                    </div>
+                </div>
+                <div class="cardorder">
+                    <div>
+                        <div class="numbers">284</div>
+                        <div class="cardName">Restaurant Request</div>
+                    </div>
+
+                    <div class="iconBox">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ========================================================= -->
+            <div class="details">
+
+
+                <div class="RestaurantAcceptation">
+
+                    <div class="RestaurantRequest shop-content">
+
+                        <div class="headRestaurant">
+                            <h2>Restaurant Request</h2>
+
+                        </div>
+                        <div class="bodyrestaurant">
+                            <div class="imageRestaurant">
+                                <img src="data:image/jpeg;base64, class=" imageRestau">
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Restaurant Name : <span class="NameInfo" id="FullName"></span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Address: <span class="NameInfo" id="FullName"></span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Phone : <span class="NameInfo" id="FullName"></span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Email: <span class="NameInfo" id="FullName"></span></p>
+
+                            </div>
+                            <div class="CommercialRegister">
+                                <span class="material-symbols-outlined iconRegister">
+                                    upload_file
+                                </span>
+                                <a class="RegisterPdf" href="" target="_blank"> <span class="NameInfo" id="FullName">Commercial Register</span></a>
+
+                            </div>
+
+                        </div>
+                        <form style="margin-left: -345px;" action="">
+
+                            <div class="bottomrestaurant">
+                                <button name="accepted" type="submit" value="" class="acceptButton buttonss">
+                                    <span class="material-symbols-outlined">
+                                        check
+                                    </span>accepted
+                                </button>
+                                <button type="submit" name="refused" value="" class="refuseButton buttonss">
+
+                                    refused
+                                </button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!--   <div class="RestaurantAcceptation">
+                    <div class="RestaurantRequest shop-content">
+
+                        <div class="headRestaurant">
+                            <h2>Restaurant Request</h2>
+
+                        </div>
+                        <div class="bodyrestaurant">
+                            <div class="imageRestaurant">
+                                <img src="img/rest4.jpg" class="imageRestau">
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Restaurant Name : <span class="NameInfo" id="FullName">Le Bernardin</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Address: <span class="NameInfo" id="FullName">Skida céti 5OOlogt</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Phone : <span class="NameInfo" id="FullName">+213656923827</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Email: <span class="NameInfo" id="FullName">bouhadjaraouf1@gmail.com</span></p>
+
+                            </div>
+                            <div class="CommercialRegister">
+                                <span class="material-symbols-outlined iconRegister">
+                                    upload_file
+                                </span>
+                                <a class="RegisterPdf" href="img/Register.pdf" target="_blank"> <span class="NameInfo" id="FullName">CommercialRegister</span></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="bottomrestaurant">
+                            <button class="acceptButton buttonss">
+                                <span class="material-symbols-outlined">
+                                    check
+                                </span>accepted
+                            </button>
+                            <button class="refuseButton buttonss">
+
+                                refused
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="RestaurantRequest shop-content">
+
+                        <div class="headRestaurant">
+                            <h2>Restaurant Request</h2>
+
+                        </div>
+                        <div class="bodyrestaurant">
+                            <div class="imageRestaurant">
+                                <img src="img/rest4.jpg" class="imageRestau">
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Restaurant Name : <span class="NameInfo" id="FullName">Le Bernardin</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Address: <span class="NameInfo" id="FullName">Skida céti 5OOlogt</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Phone : <span class="NameInfo" id="FullName">+213656923827</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Email: <span class="NameInfo" id="FullName">bouhadjaraouf1@gmail.com</span></p>
+
+                            </div>
+                            <div class="CommercialRegister">
+                                <span class="material-symbols-outlined iconRegister">
+                                    upload_file
+                                </span>
+                                <a class="RegisterPdf" href="img/Register.pdf" target="_blank"> <span class="NameInfo" id="FullName">CommercialRegister</span></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="bottomrestaurant">
+                            <button class="acceptButton buttonss">
+                                <span class="material-symbols-outlined">
+                                    check
+                                </span>accepted
+                            </button>
+                            <button class="refuseButton buttonss">
+
+                                refused
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="RestaurantRequest shop-content">
+
+                        <div class="headRestaurant">
+                            <h2>Restaurant Request</h2>
+
+                        </div>
+                        <div class="bodyrestaurant">
+                            <div class="imageRestaurant">
+                                <img src="img/rest4.jpg" class="imageRestau">
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Restaurant Name : <span class="NameInfo" id="FullName">Le Bernardin</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Address: <span class="NameInfo" id="FullName">Skida céti 5OOlogt</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Phone : <span class="NameInfo" id="FullName">+213656923827</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Email: <span class="NameInfo" id="FullName">bouhadjaraouf1@gmail.com</span></p>
+
+                            </div>
+                            <div class="CommercialRegister">
+                                <span class="material-symbols-outlined iconRegister">
+                                    upload_file
+                                </span>
+                                <a class="RegisterPdf" href="img/Register.pdf" target="_blank"> <span class="NameInfo" id="FullName">CommercialRegister</span></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="bottomrestaurant">
+                            <button class="acceptButton buttonss">
+                                <span class="material-symbols-outlined">
+                                    check
+                                </span>accepted
+                            </button>
+                            <button class="refuseButton buttonss">
+
+                                refused
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="RestaurantRequest shop-content">
+
+                        <div class="headRestaurant">
+                            <h2>Restaurant Request</h2>
+
+                        </div>
+                        <div class="bodyrestaurant">
+                            <div class="imageRestaurant">
+                                <img src="img/rest4.jpg" class="imageRestau">
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Restaurant Name : <span class="NameInfo" id="FullName">Le Bernardin</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Address: <span class="NameInfo" id="FullName">Skida céti 5OOlogt</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Phone : <span class="NameInfo" id="FullName">+213656923827</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Email: <span class="NameInfo" id="FullName">bouhadjaraouf1@gmail.com</span></p>
+
+                            </div>
+                            <div class="CommercialRegister">
+                                <span class="material-symbols-outlined iconRegister">
+                                    upload_file
+                                </span>
+                                <a class="RegisterPdf" href="img/Register.pdf" target="_blank"> <span class="NameInfo" id="FullName">CommercialRegister</span></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="bottomrestaurant">
+                            <button class="acceptButton buttonss">
+                                <span class="material-symbols-outlined">
+                                    check
+                                </span>accepted
+                            </button>
+                            <button class="refuseButton buttonss">
+
+                                refused
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="RestaurantRequest shop-content">
+
+                        <div class="headRestaurant">
+                            <h2>Restaurant Request</h2>
+
+                        </div>
+                        <div class="bodyrestaurant">
+                            <div class="imageRestaurant">
+                                <img src="img/rest4.jpg" class="imageRestau">
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Restaurant Name : <span class="NameInfo" id="FullName">Le Bernardin</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Address: <span class="NameInfo" id="FullName">Skida céti 5OOlogt</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Phone : <span class="NameInfo" id="FullName">+213656923827</span></p>
+
+                            </div>
+                            <div class="NameCustomer">
+                                <p class="FullName">Email: <span class="NameInfo" id="FullName">bouhadjaraouf1@gmail.com</span></p>
+
+                            </div>
+                            <div class="CommercialRegister">
+                                <span class="material-symbols-outlined iconRegister">
+                                    upload_file
+                                </span>
+                                <a class="RegisterPdf" href="img/Register.pdf" target="_blank"> <span class="NameInfo" id="FullName">CommercialRegister</span></a>
+
+                            </div>
+
+                        </div>
+
+                        <div class="bottomrestaurant">
+                            <button class="acceptButton buttonss">
+                                <span class="material-symbols-outlined">
+                                    check
+                                </span>accepted
+                            </button>
+                            <button class="refuseButton buttonss">
+
+                                refused
+                            </button>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                </div> -->
+
+                <!--///////////////////*////////////add Hosting////////////////////////////////////-->
+                <div class="addHost">
+
+                    <div class="cardadd shop-content">
+
+                        <div class="addfood">
+                            <h2>Add new hosting</h2>
+                            <div class="addicon">
+                                <img class="addimg" src="img/add.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+            <!--  </div> -->
+
+            <!--/////////////////////////////////form add new hosting////////////////////////////-->
+
+
+            <div class="newhosting">
+
+                <form action="" class="formfood">
+                    <div class="headfoodform">
+                        <div class="closefood">
+                            <span class="material-symbols-outlined" id="close-cart">
+                                close
+                            </span>
+                        </div>
+
+                        <div class="titlemfood">
+                            <h3 class="titleres">Add new hosting</h3>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="bfoodform">
+
+                        <div class="boxtitle">
+                            <label class="titlelabel">Type of Hosting</label>
+                            <div class="iconf">
+
+                                <input class="name inputF" type="text" id="title" name="title" maxlength="40" placeholder="Type of food" required>
+                            </div>
+                        </div>
+                        <div class="boxpq">
+                            <div>
+                                <label class="inflabel">Price of hosting</label>
+                                <div class="iconf">
+                                    <input class="name inputF" type="number" id="prix" name="prix" placeholder="price of hostng" required>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="boxOrder">
+                            <div>
+                                <label class="inflabel">Number of food</label>
+                                <div class="iconf">
+                                    <input class="name inputF" name="number_of_food" type="number" placeholder="number of food" required>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="boxTable">
+                            <div>
+                                <label class="inflabel">Number of Table </label>
+                                <div class="iconf">
+                                    <input class="name inputF" name="number_of_table" type="number" placeholder="number of Table" required>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="addfButton">
+                            <button class="buttonadd" name="add_host" type="submit">Add Hosting</button>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+
+
+
+
+
+            <script src="javascript/systemDashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="shortcut icon" type="x-icon" href="img/Logo Food2.png">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="stylepopup.css">
+    <link rel="stylesheet" href="styleReserve.css">
+    <link rel="stylesheet" href="styleOrder.css">
+    <title>food</title>
+</head>
+
+<body>
+    <header class="header" data-header>
+        <nav class="navbar">
+            <img class="logo" src="img/Logo4.png">
+
+            <ul class="nav__links">
+                <li class="nav-item">
+                    <a href="home.html" class="navbar-link" data-nav-link>Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="menu.html" class="navbar-link" data-nav-link>Menu</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#about.html" class="navbar-link" data-nav-link>About</a>
+                </li>
+            </ul>
+
+
+
+            <div class="cartn">
+                <a class="or" id="cart-icon"><img src="img/restaurant.png" alt="facebook" class="imgff"
+                        id="cart-icon"></a>
+                <div id="numbers" class="count">0
+
+                </div>
+
+            </div>
+
+            <!--////////////////////CART//////////////////////////////////////////////-->
+            <div class="cart">
+                <h2 class="cart-title">Your cart</h2>
+
+                <div class="cart-content">
+
+                </div>
+
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">0 DA</div>
+                </div>
+
+                <a><button type="button" class="btn-buy buttonH">Buy Now</button></a>
+
+                <span class="material-symbols-outlined spanH close-cartH" id="close-cart">
+                    close
+                </span>
+
+            </div>
+
+
+
+
+            <div class="profileimg" onclick="menuToggle();">
+                <a class="profile" href="#"> <img src="img/photo profile.jpg" alt="profile" class="imgp"></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><img src="img/profile.png"><a href="profile.html">view profile</a> </li>
+
+                    <li> <img src="img/fav.png"><a href="#">Favorites</a> </li>
+                    <li class="liout"> <img src="img/logout.png"><a href="#">Log out</a> </li>
+
+                </ul>
+            </div>
+
+        </nav>
+
+
+
+
+        </div>
+
+
+
+
+
+    </header>
+
+    <div class="slider">
+        <div class="iconSlide hide">
+            <span class="left-arrow">&lt;</span>
+        </div>
+
+
+        <ul class="tabs">
+            <li class="tab active">All</li>
+            <li class="tab">salads</li>
+            <li class="tab">Burgers</li>
+            <li class="tab">Pizza</li>
+            <li class="tab">Breakfast</li>
+            <li class="tab">Sandwich</li>
+            <li class="tab">Seafood</li>
+            <li class="tab">Drink</li>
+            <li class="tab">Traditional food</li>
+            <li class="tab">French cuisine</li>
+            <li class="tab">American cuisine</li>
+            <li class="tab">Recently Uploaded</li>
+        </ul>
+
+        <div class="iconSlide">
+            <span class="right-arrow">&gt;</span>
+        </div>
+
+
+    </div>
+
+
+
+    <!--//////////////////////////bottom navbar///////////////////////////////-->
+    <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="home.html" class="nav__link active-link">
+                    <img class="nav__icon" src="img/home.png">
+                    <span class="nav__name">Home</span>
+                </a>
+            </li>
+
+            <li class="nav__item">
+                <a href="menu.html" class="nav__link">
+                    <span class="material-symbols-outlined">
+                        restaurant
+                    </span>
+                    <span class="nav__name">Menu</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="menu.html" class="nav__link">
+                    <span class="material-symbols-outlined nav__icon">
+                        person
+                    </span>
+                    <span class="nav__name">About</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <!--////////////////////////////////////////////////ORDER FORM:::::::::::::::::::::::::::::///////////////////////////////////////////////////////-->
+    <div class="FormOrder">
+        <form class="popup-content2" method="post">
+            <div class="closeOrder">
+                <span class="material-symbols-outlined" id="close-cart">
+                    close
+                </span>
+            </div>
+            <div class="headForm">
+                <div class="titleForm ">
+                    <h3>The Green Corner</h3>
+                </div>
+
+
+
+            </div>
+
+            <div class="select-menuForm">
+
+                <div class="contactForm">
+                    <div class="contct">
+                        <span id="left" class="material-symbols-outlined y">
+                            arrow_back_ios
+                        </span>
+                        <h4>Contact</h4>
+                    </div>
+
+                    <div class="box1">
+
+
+
+                        <div class="boxInput">
+                            <label>first name</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                                <input class="name inputF" type="text" id="fname" name="fname" required>
+                            </div>
+                        </div>
+
+                        <div class="boxInput">
+                            <label>last name</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                                <input class="nom inputF" type="text" id="lname" name="lname" required>
+                            </div>
+                        </div>
+
+                        <div class="boxInput"> <label>Phone</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    call
+                                </span>
+                                <input class="inputF" type="tel" id="phone" name="phone"
+                                    placeholder="+213 6 56 92 38 27" required>
+                            </div>
+                        </div>
+
+                        <div class="boxInput">
+                            <label>Email</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    mail
+                                </span>
+                                <input class="inputF" type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="box2">
+
+                        <div class="boxInput">
+                            <label>Address</label>
+                            <div class="icon">
+
+                                <input class="comment inputF" type="text" id="address" name="address" required>
+                            </div>
+                        </div>
+                        <div class="boxInput">
+                            <label>COMMENTS,ALLERGIES AND EATING HABITS (optional)</label>
+                            <div class="icon">
+
+                                <input class="comment inputF" type="text" id="comments" name="comments">
+                            </div>
+                        </div>
+
+                        <div class="boxInput">
+                            <label>YOUR GIFT CODE (optional)</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    redeem
+                                </span>
+                                <input class="gift inputF" type="text" id="giftCode" name="giftCode">
+                            </div>
+                        </div>
+
+                        <div class="boxInput PaymentOption">
+                            <label>Payment Method</label>
+                            <div class="icon">
+
+                                <div class="payment-options">
+                                    <div class="paymentC">
+                                        <input class="paymentCash" type="radio" id="cod" name="paymentMethod"
+                                            value="cod" required>
+                                        <label class="PaymentLabel" for="cod">Cash on Delivery</label>
+                                    </div>
+                                    <div class="paymentL">
+                                        <input class="paymentenlign" type="radio" id="online" name="paymentMethod"
+                                            value="online" required>
+                                        <label class="PaymentLabel" for="online">Payment Online</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="chekOrder">
+                            <div class="checkbox-group">
+                                <input class="inputF" type="checkbox" id="checkbox1" name="checkbox1">
+                                <label for="checkbox1">Save this information to facilitate my future order.</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input class="inputF" type="checkbox" id="checkbox2" name="checkbox2">
+                                <label for="checkbox2">Sign me up to receive dining offers and news from this restaurant
+                                    by email.</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input class="inputF" type="checkbox" id="checkbox3" name="checkbox3">
+                                <label for="checkbox3">Yes, I want to get text updates and reminders about my
+                                    order.</label>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="reserveButtonOrder">
+                        <button class="buttonForm" type="submit">Confirm Order</button>
+                    </div>
+                    <div class="paymentButtonOrder">
+                        <button class="buttonForm" type="button">Payment</button>
+
+                    </div>
+
+                </div>
+
+                <div class="Orders">
+
+                    <div class="Orderinfo">
+                        <div class="OrderHead">
+                            <h3>Your Orders.</h3>
+                            <h4><a class="modifyOrder">Modify</a></h4>
+                        </div>
+
+                        <div class="OrderContent">
+
+                        </div>
+                        <div class="Orderbottom">
+                            <h4 class="TotalN">Total:</h4>
+                            <span class="totalNumber" id="totalNumber" name="totalNumber">0 DA</span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+    </div>
+
+    <!--///////////////////////////////////////////////////////////payment form/////////////////////////////////////////////////////////-->
+    <div id="PayModal" class="modalPayment">
+        <div class="modal-Payment">
+            <div class="headPayment">
+                <div class="closePayment">
+                    <span class="material-symbols-outlined" id="close-cart">
+                        close
+                    </span>
+                </div>
+
+                <div class="titlePayment">
+                    <h3 class="titlePay">Payment</h3>
+                </div>
+
+            </div>
+            <div class="Payment-body">
+                <div class="TotalPayment">
+                    <p class="PayTotal">Total Payment :<span class="TotalNumber">6000 DA</span></p>
+
+                </div>
+                <div class="PaymentMethod">
+                    <div id="paypal-container" class="paymentButton"></div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+    <!--//////////////////////////////////////////////     M   e   n   u/       ////////////////////////////////////////-->
+
+    <section class="blog" id="blog">
+        <div class="heading">
+
+            <h3>Our Menu</h3>
+        </div>
+
+        <div class="w">
+
+            <div class="card shop-content">
+                <div class="Favorit">
+                    <span class="material-symbols-outlined FavoritIcon">
+                        favorite
+                    </span>
+
+                </div>
+                <div class="ingredient">
+                    <span class="ingredientsButton">ingredients</span>
+
+                </div>
+                <img src="img/Shrimp Scampi2.jpg" alt="Photo 1" class="product-img">
+                <h3 class="product-title">Shrimp Scampi</h3>
+                <p class="price" id="prix">1000 DA</p>
+                <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+            </div>
+            <div class="card shop-content">
+                <form action="">
+                    <div class="Favorit">
+
+                        <span class="material-symbols-outlined FavoritIcon">
+                            favorite
+                        </span>
+
+                    </div>
+                </form>
+
+                <div class="ingredient">
+                    <span class="ingredientsButton">ingredients</span>
+
+                </div>
+                <img src="img/Beef Stew.jpg" alt="Photo 1" class="product-img">
+                <h3 class="product-title">Beef Stew</h3>
+                <p class="price" id="prix">2000 DA</p>
+                <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+            </div>
+            <div class="card shop-content">
+                <div class="Favorit">
+                    <span class="material-symbols-outlined FavoritIcon">
+                        favorite
+                    </span>
+
+                </div>
+                <div class="ingredient">
+                    <span class="ingredientsButton">ingredients</span>
+
+                </div>
+                <img src="img/Chicken Curry2.jpg" alt="Photo 1" class="product-img">
+                <h3 class="product-title">Chicken Curry</h3>
+                <p class="price" id="prix">1500 DA</p>
+                <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+            </div>
+            <div class="card shop-content">
+                <div class="Favorit">
+                    <span class="material-symbols-outlined FavoritIcon">
+                        favorite
+                    </span>
+
+                </div>
+                <div class="ingredient">
+                    <span class="ingredientsButton">ingredients</span>
+
+                </div>
+                <img src="img/ratatouille.jpg" alt="Photo 1" class="product-img">
+                <h3 class="product-title">ratatouille</h3>
+                <p class="price" id="prix">1500 DA</p>
+                <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+            </div>
+            <div class="card  shop-content">
+                <div class="Favorit">
+                    <span class="material-symbols-outlined FavoritIcon">
+                        favorite
+                    </span>
+
+                </div>
+                <div class="ingredient">
+                    <span class="ingredientsButton">ingredients</span>
+
+                </div>
+                <img src="img/Cake au Chocolat.jpg" alt="Photo 1" class="product-img" draggable="false">
+                <h3 class="product-title">Chocolate cake</h3>
+                <p class="price" id="prix">2500 DA</p>
+                <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+            </div>
+            <div class="card shop-content">
+                <div class="Favorit">
+                    <span class="material-symbols-outlined FavoritIcon">
+                        favorite
+                    </span>
+
+                </div>
+                <div class="ingredient">
+                    <span class="ingredientsButton">ingredients</span>
+
+                </div>
+                <img src="img/Lamb Curry.jpg" alt="Photo 1" class="product-img">
+                <h3 class="product-title">Lamb Curry</h3>
+                <p class="price" id="prix">1500 DA</p>
+                <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+            </div>
+            <div class="card shop-content">
+                <div class="Favorit">
+                    <span class="material-symbols-outlined FavoritIcon">
+                        favorite
+                    </span>
+
+                </div>
+                <img src="img/Shrimp Scampi.jpg" alt="Photo 1" class="product-img">
+                <h3 class="product-title">Shrimp Scampi</h3>
+                <p class="price" id="prix">1500 DA</p>
+                <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+            </div>
+            <div class="card shop-content">
+                <div class="Favorit">
+                    <span class="material-symbols-outlined FavoritIcon">
+                        favorite
+                    </span>
+
+                </div>
+                <img src="img/Spaghetti Carbonara.jpg" alt="Photo 1" class="product-img">
+                <h3 class="product-title">Spaghetti Carbonara</h3>
+                <p class="price" id="prix">1500 DA</p>
+                <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+            </div>
+            <div class="card shop-content">
+                <div class="Favorit">
+                    <span class="material-symbols-outlined FavoritIcon">
+                        favorite
+                    </span>
+                </div>
+                <img src="img/Chicken Curry.jpg" alt="Photo 1" class="product-img">
+                <h3 class="product-title">Chicken Curry</h3>
+                <p class="price" id="prix">1500 DA</p>
+                <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+            </div>
+            <div class="card shop-content">
+                <div class="Favorit">
+                    <span class="material-symbols-outlined FavoritIcon">
+                        favorite
+                    </span>
+                </div>
+                <img src="img/Chicken Curry.jpg" alt="Photo 1" class="product-img">
+                <h3 class="product-title">Chicken Curry</h3>
+                <p class="price" id="prix">1500 DA</p>
+                <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+            </div>
+            <div class="card shop-content">
+                <div class="Favorit">
+                    <span class="material-symbols-outlined FavoritIcon">
+                        favorite
+                    </span>
+                </div>
+                <img src="img/F1.jpg" alt="Photo 1" class="product-img">
+                <h3 class="product-title">Chicken Curr</h3>
+                <p class="price" id="prix">1500 DA</p>
+                <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+            </div>
+            <div class="card shop-content">
+                <div class="Favorit">
+                    <span class="material-symbols-outlined FavoritIcon">
+                        favorite
+                    </span>
+                </div>
+                <img src="img/Chicken Curry2.jpg" alt="Photo 1" class="product-img">
+                <h3 class="product-title">Chicken Curry</h3>
+                <p class="price" id="prix">1500 DA</p>
+                <button class="ordern add-cart buttonH" id="cart-ico" onclick="calculeNumbers()">Order Now</button>
+            </div>
+
+
+        </div>
+
+        <!--////////////////////////////////////////////////////////////Ingredients//////////////////////////////////////////////////////////////////-->
+        <div id="ingredientmodal" class="ingredientdetaile">
+            <div class="modal-content">
+                <div class="headOrder">
+                    <div class="closeingredient">
+                        <span class="material-symbols-outlined">
+                            close
+                        </span>
+                    </div>
+
+                    <div class="titleingredient">
+                        <h3 class="titleres">ingredients</h3>
+                    </div>
+
+                </div>
+                <div class="order-body">
+                    <div class="titlefood">
+                        <p class="titlef product-title"> Chocolate cake</p>
+                    </div>
+                    <div class="ingredientfood">
+                        <p class="ingredientf">
+                            1 and 3/4 cups (220g) all-purpose flour
+                            1 and 1/2 cups (300g) granulated sugar.
+                            3/4 cup (65g) unsweetened cocoa powder
+                            1 and 1/2 teaspoons baking powder
+                            1 and 1/2 teaspoons baking soda
+                            1 teaspoon salt
+                            2 large eggs, at room temperature
+                            1 cup (240ml) whole milk, at room temperature
+                            1/2 cup (120ml) vegetable oil
+                            2 teaspoons pure vanilla extract
+                            1 cup (240ml) boiling water
+                            For the Frosting:
+                            1 cup (230g) unsalted butter, softened to room temperature
+                            3 and 1/2 cups (440g) powdered sugar, sifted
+                            1/2 cup (45g) unsweetened cocoa powder
+                            1/2 teaspoon salt
+                            2 teaspoons pure vanilla extract
+                            1/4 cup (60ml) heavy cream (or milk)</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+    <!---///////////////////////////////////CONTACT////////////////////////////////////////////////////////////////-->
+    <section class="homeC sectionH" id="contact">
+
+
+        <div class="contactus">
+
+            <h2 class="title">Our information</h2>
+            <h3 class="pr">Fill up the form and our team will get back to <br>you within 24 hours.</h3>
+
+            <ul class="info">
+                <li class="liH">
+                    <i><img src="img/telephone.png" alt="facebook" class="imgff"></i>
+                    <span class="spanH">Phone:&nbsp&nbsp&nbsp </span><a href="tel:+213656923827">+213656923827</a>
+                </li>
+                <li class="liH">
+                    <i><img src="img/mail.png" alt="facebook" class="imgff"></i>
+                    <span class="spanH">Email:&nbsp&nbsp&nbsp&nbsp</span><a
+                        href="mailto:info@food.com">info@food.com</a>
+                </li>
+            </ul>
+
+            <ul class="social">
+                <li class="liH">
+                    <a href="https://www.facebook.com/Raouf.Bh" target="_blank">
+                        <img src="img/facebook.png" alt="facebook" class="imgff">
+                    </a>
+                </li>
+                <li class="liH">
+                    <a target="_blank">
+                        <img src="img/twitter.png" alt="twitter" class="imgff">
+                    </a>
+                </li>
+                <li class="liH">
+                    <a target="_blank">
+                        <img src="img/instagram.png" alt="instagram" class="imgff">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="contact" id="contact">
+            <form class="contact-form">
+                <div>
+                    <label class="labelH" for="name">Name</label>
+                    <input class="inputHO" type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label class="labelH" for="email">Email</label>
+                    <input class="inputHO" type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label class="labelH" for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button class="buttonH" type="submit">Send</button>
+            </form>
+        </div>
+
+
+    </section>
+
+
+    </div>
+
+    </section>
+
+
+
+
+    <!--///////////////////////////////////////FOOTER////////////////////////////////////////////////////////-->
+    <footer>
+        <ul class="iconSocial">
+            <li><a href="https://www.facebook.com/Raouf.Bh" target="_blank"><img src="../img/facebook.png"
+                        alt="facebook" class="imgf"></a></li>
+            <li><a target="_blank"><img src="../img/twitter.png" alt="twitter" class="imgf"></a></li>
+            <li><a target="_blank"><img src="../img/linkedin.png" alt="linkedin" class="imgf"></a></li>
+            <li><a target="_blank"><img src="../img/instagram.png" alt="instagram" class="imgf"></a></li>
+        </ul>
+
+        <ul class="mene">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <P>©2024 Bouhadja Raouf | All Rights Reserved.</P>
+    </footer>
+
+
+
+
+    <script src="./menu/menutogle.js" defer></script>
+    <script src="./menu/cart.js" defer></script>
+    <script src="./menu/order.js" defer></script>
+    <script src="./menu/ingredient.js" defer></script>
+    <script src="./menu/payment.js" defer></script>
+    <script src="./menu/scrole.js" defer></script>
+
+
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=ARuAw6HsyBxYOCHKeYVN9o7WAJZbvw4gt7Y1Isn6gs4Uw70r47bfbryfjVK0qDtx0Bce2HK24Qb7rU0E">
+    </script>
+
+
+
+</body>
+
+</html>

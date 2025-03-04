@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="img/x-icon">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="tim.css">
+    <link rel="stylesheet" href="profiile.css">
+    <link rel="stylesheet" href="cartandpay/shop-cart.css">
+    <link rel="stylesheet" href="./menu/stylepopup.css">
+    <link rel="stylesheet" href="./menu/styleReserve.css">
+    <link rel="stylesheet" href="./menu/styleOrder.css">
+    <style>
+        .Logout {
+            padding: 12px;
+            padding: 0;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: transparent !important;
+            pointer-events: painted;
+        }
+
+        .modal {
+            display: none;
+
+            position: fixed;
+
+            z-index: 1;
+
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 90%;
+
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 2% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+            height: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: auto;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        .save-btn,
+        .cancel-btn,
+        .delete-btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            flex: 1;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .save-btn {
+            background-color: #007bff;
+
+            margin-top: 10px;
+
+
+        }
+
+        .cancel-btn {
+            background-color: #ffc107;
+        }
+
+        .delete-btn {
+            background-color: #dc3545;
+        }
+
+        .save-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .cancel-btn:hover {
+            background-color: #e0a800;
+        }
+
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+
+        .admin {
+            background-color: #fff;
+            width: 82vw;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+
+
+
+
+        }
+
+        .admin-name {
+            font-size: 1.5rem;
+            color: #555;
+        }
+
+        .admin-name>a {
+            cursor: pointer;
+            padding: auto;
+            font-size: 1.5rem;
+            margin-left: 10px;
+
+
+
+            color: #7b6ef6;
+            text-decoration: none;
+        }
+
+        /*  .link-admin {} */
+
+        .thanks {
+            font-size: 4rem;
+            color: #000;
+            text-align: left;
+            text-shadow: 5px 8px rgba(172, 161, 161, 0.393);
+
+        }
+
+        .thanks-text {
+            font-size: 2rem;
+
+            margin-top: 30px;
+            margin-bottom: 40px;
+
+
+
+        }
+
+
+        .subscribe-container {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .subscribe-container span {
+            flex: 1;
+            padding: 10px;
+            font-size: x-large;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            border-right: none;
+        }
+
+        .subscribe-container a {
+            font-size: x-large;
+            padding: 10px 20px;
+            background-color: #7b6ef6;
+            color: #fff;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        .subscribe-container a:hover {
+            background-color: #5a50e6;
+        }
+
+        .thank-you-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 90%;
+
+        }
+
+        .favorite-button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            font-size: 2rem;
+        }
+
+        .favorite-icon {
+            color: #ff0000' ;
+
+        }
+    </style>
+    <title>food</title>
+    <script>
+        var count = 0;
+
+        function calculeNumbers() {
+            count++;
+            var output = ' ' + count;
+
+            document.getElementById("numbers").innerHTML = output;
+        }
+    </script>
+    <style media="screen">
+        .voucher {
+            border-radius: 10px;
+            width: 700px;
+            height: 300px;
+            background: #fff;
+            display: flex;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .left-section {
+            width: 40%;
+            background: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px;
+
+        }
+
+        .left-section button {
+            position: relative;
+            bottom: -70px;
+            right: 40px;
+        }
+
+        .left-section .amount {
+
+            color: red;
+            padding: 10PX;
+            text-shadow: 3px 2px rgba(168, 97, 97, 0.393);
+            font-family: 'Dancing Script', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .ribbon {
+            position: absolute;
+            z-index: 10;
+            left: 41.5%;
+            width: 100px;
+            height: auto;
+
+        }
+
+        .right-section {
+            padding-left: 15px;
+            width: 60%;
+            background: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            position: relative;
+        }
+
+        .right-section .company-name {
+            font-family: 'Dancing Script', cursive;
+            color: #ff4141;
+            text-shadow: 3px 3px rgba(172, 161, 161, 0.393);
+            font-size: 24px;
+            font-weight: bold;
+
+        }
+
+        .right-section .voucher-text {
+            font-size: 20px;
+            padding-left: 5px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .right-section .description-res {
+            font-size: 20px;
+            padding-left: 5px;
+
+
+        }
+
+        .right-section .company-name-bottom {
+            font-size: 18px;
+            padding-left: 15Px;
+            color: #333;
+            margin-top: 30px;
+
+        }
+
+        .div-Cart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .playhard {
+            left: -251px;
+            margin-top: -71px;
+            position: relative;
+            margin-left: -148px;
+            background-color: transparent;
+        }
+
+        .profileSeding {
+            margin-left: 179px;
+        }
+
+        .upload {
+            width: 140px;
+            position: relative;
+            margin: auto;
+            text-align: center;
+        }
+
+        .upload img {
+            border-radius: 50%;
+            border: 8px solid #DCDCDC;
+            width: 125px;
+            height: 125px;
+        }
+
+        .upload .rigthRound {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #00B4FF;
+            width: 32px;
+            height: 32px;
+            line-height: 33px;
+            text-align: center;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .upload .leftRound {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: red;
+            width: 32px;
+            height: 32px;
+            line-height: 33px;
+            text-align: center;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .centerprofil {
+            margin: 112px;
+        }
+
+        .upload .fa {
+            color: white;
+
+        }
+
+        .upload input {
+            position: absolute;
+            transform: scale(2);
+            opacity: 0;
+        }
+
+        .upload input::-webkit-file-upload-button,
+        .upload input[type=submit] {
+            cursor: pointer;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <header class="header" data-header>
+        <nav class="navbar">
+            <img class="logo" src="img/Logo4.png">
+
+            <ul class="nav__links">
+                <li class="nav-item">
+                    <a href="home.html" class="navbar-link" data-nav-link>Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="./menu/menu.html?All_Menu=Get_All_menu" class="navbar-link" data-nav-link>Menu</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="./Resturant_page.html" class="navbar-link" data-nav-link>Restaurant</a>
+                </li>
+            </ul>
+
+
+
+
+            <div class="cartn">
+                <div>
+                    <a href="#" class="or" id="cart-icon"><img src="img/restaurant.png" alt="facebook" class="imgff"
+                            id="cart-icon"></a>
+
+                    <p id="numbers" class="count" style="margin-right: 165px;"></p>
+
+                </div>
+
+            </div>
+
+            <!--////////////////////CART//////////////////////////////////////////////-->
+            <div class="cart">
+                <h2 class="cart-title">Your cart</h2>
+
+                <div class="cart-content">
+
+                    <!-- <img src="<?html echo $value['image']; ?>"  class="cart-img" alt="img1">
+                 <div class="detail-box">
+                  <div class="cart-product-title"><?html echo  $value['name']; ?></div>
+               <div class="cart-price">$<?html echo $value['price']; ?></p></div>
+                 <input type="number" value="1" class="cart-quantity">
+                    </div> -->
+
+                    <div class="cart-box">
+                        <img src="img/31.png" alt="" class="cart-img">
+                        <input type="hidden" class="food_id" value="">
+                        <input type="hidden" class="rest_id" value="">
+                        <input type="hidden" class="number_item" value="">
+
+                        <div class="detail-box">
+                            <div class="cart-product-title"></div>
+                            <div class="cart-price">DA</div>
+                            <input type="number" value="" class="cart-quantity">
+                        </div>
+                        <form>
+                            <input type="hidden" name="food_id" value="">
+
+                            <button type="submit" class="remove" name="remove_profile"><span
+                                    class="material-symbols-outlined ">
+                                    delete
+                                </span> </button>
+                        </form>
+                    </div>
+
+
+
+                </div>
+
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price"> DA</div>
+                </div>
+
+                <a class="btn-buy buttonH">Buy Now</a>
+
+                <span class="material-symbols-outlined spanH close-cartH" id="close-cart">
+                    close
+                </span>
+
+            </div>
+
+
+
+
+            <!--  <div class='profileimg' onclick=menuToggle();> -->
+            <div class="profileimg" onclick="menuToggle();">
+                <a class="profile" href="#"> <img src="img/1.png" alt="profile" class="imgp"></a>
+            </div>
+            <!--  <a class='profile' href='#'> <img src='file/<?html echo $use['type']; ?>' alt='profile' class='imgp' id='photo1'></a> 
+            </div> -->
+            <div class="menu">
+                <ul>
+                    <li><img src="img/profile.png"><a href="profile.html">view profile</a> </li>
+
+                    <li> <img src="img/fav.png"><a href="Favorites.html">Favorites</a> </li>
+                    <li class="liout liH"> <img src="img/logout.png">
+                        <form action="LOGIN.html" method="post">
+                            <input class="Logout" type="submit" value="Logout" name="logout">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+
+
+        </div>
+
+
+
+
+
+    </header>
+
+    <div class="FormOrder">
+        <form class="popup-content2" action="./cartandpay/complet_payment.html" method="POST">
+            <div class="closeOrder">
+                <span class="material-symbols-outlined" id="close-cart">
+                    close
+                </span>
+            </div>
+            <div class="headForm">
+                <div class="titleForm ">
+                    <h3>The Green Corner</h3>
+                </div>
+
+
+
+            </div>
+
+            <div class="select-menuForm">
+
+                <div class="contactForm">
+                    <div class="contct">
+                        <span id="left" class="material-symbols-outlined y">
+                            arrow_back_ios
+                        </span>
+                        <h4>Contact</h4>
+                    </div>
+
+                    <div class="box1">
+
+
+
+                        <div class="boxInput">
+                            <label>first name</label>
+
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                                <input class="name inputF" type="text" id="fname" name="fname" required>
+                                <input type="hidden" id="totalNumberinput" name="totalNumber" value="">
+                            </div>
+                        </div>
+
+                        <div class="boxInput">
+                            <label>last name</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+
+                                <input class="nom inputF" type="text" id="lname" name="lname" required>
+                            </div>
+                        </div>
+
+                        <div class="boxInput"> <label>Phone</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    call
+                                </span>
+                                <input class="inputF" type="tel" id="phone" name="phone"
+                                    placeholder="+213 6 56 92 38 27" required>
+                            </div>
+                        </div>
+
+                        <div class="boxInput">
+                            <label>Email</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    mail
+                                </span>
+                                <input class="inputF" type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="box2">
+
+                        <div class="boxInput">
+                            <label>Address</label>
+                            <div class="icon">
+
+                                <input class="comment inputF" type="text" id="address" name="address" required>
+                            </div>
+                        </div>
+                        <div class="boxInput">
+                            <label>COMMENTS,ALLERGIES AND EATING HABITS (optional)</label>
+                            <div class="icon">
+
+                                <input class="comment inputF" type="text" id="comments" name="comments">
+                            </div>
+                        </div>
+
+                        <!--  <div class="boxInput">
+                            <label>YOUR GIFT CODE (optional)</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    redeem
+                                </span>
+                                <input class="gift inputF" type="text" id="giftCode" name="giftCode">
+                            </div>
+                        </div> -->
+
+                        <div class="boxInput PaymentOption">
+                            <label>Payment Method</label>
+                            <div class="icon">
+
+                                <div class="payment-options">
+                                    <div class="paymentC">
+                                        <input class="paymentCash" type="radio" id="cod" name="paymentMethod"
+                                            value="cod" required>
+                                        <label class="PaymentLabel" for="cod">Cash on Delivery</label>
+                                    </div>
+                                    <div class="paymentL">
+                                        <input class="paymentenlign" type="radio" id="online" name="paymentMethod"
+                                            value="online" required>
+                                        <label class="PaymentLabel" for="online">Payment Online</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chekOrder">
+                            <div class="checkbox-group">
+                                <input class="inputF" type="checkbox" id="checkbox1" name="checkbox1">
+                                <label for="checkbox1">Save this information to facilitate my future order.</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reserveButtonOrder">
+                        <button type="submit" name="cash_order">Confirm Order</button>
+                    </div>
+                    <div class="paymentButtonOrder">
+                        <button type="submit" name="paypal">Payment</button>
+
+                    </div>
+
+                </div>
+
+                <div class="Orders">
+
+                    <div class="Orderinfo">
+
+                        <div class="OrderHead">
+                            <h3>Your Orders.</h3>
+                            <h4><a class="modifyOrder">Modify</a></h4>
+                        </div>
+
+                        <div class="OrderContent">
+                            <div class="cart-content2">
+                                <img src="img/31.png" alt="not found" class="img-order">
+                                <div class="detail-order">
+                                    <div class="product-title"></div>
+                                    <div class="product-quantity">
+                                        quantity: <span class="quantityNum"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="Orderbottom">
+                            <h4 class="TotalN">Total:</h4>
+                            <span class="totalNumber" id="totalNumber" name="totalNumber">0 DA</span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+
+    <!--//////////////////////////bottom navbar///////////////////////////////-->
+    <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="home.html" class="nav__link active-link">
+                    <img class="nav__icon" src="img/home.png">
+                    <span class="nav__name">Home</span>
+                </a>
+            </li>
+
+            <li class="nav__item">
+                <a href="menu.html" class="nav__link">
+                    <span class="material-symbols-outlined">
+                        restaurant
+                    </span>
+                    <span class="nav__name">Menu</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="menu.html" class="nav__link">
+                    <span class="material-symbols-outlined nav__icon">
+                        person
+                    </span>
+                    <span class="nav__name">About</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+    <section class="container">
+
+        <div class="profile">
+            <div class="profile-img">
+                <script>
+                    window.onload = function () {
+                        var messagecontainer = document.getElementById('message');
+                        var messatext = "message";
+                        messagecontainer.innerHTML = messatext;
+                        setTimeout(function () {
+                            messagecontainer.style.display = 'none';
+                        }, 5000);
+                        messatext = "message";
+                    };
+                </script>
+                <h1 id="message" style="text-align: center; color: red; display: block;"></h1>
+                <img srcimg/31.png'id='photo'> <!-- <img src="img/photo profile.jpg"> -->
+                <!--   <form action="profille.html" class="for" method="post" enctype="multipart/form-data"> 
+                <input type="file" name="file" id="file" accept="image/*" required>
+               <label for='file'> 
+                   <button type="submit" class="for" name="prof" >UP</button>
+                </form> 
+           <label for="file" >
+                <img id="uploadbtn" src="img/camera.png"  ></label>-->
+            </div>
+        </div>
+        <div class="centerprofil">
+            <form action="profille.html" class="playhard" enctype="multipart/form-data" method="post">
+                <input type="hidden" name="id" value="">
+                <div class="upload">
+
+                    <img src="img/31.png" alt="profile" id="imag">
+                    <!-- <img src="file/<?html /* echo $use['type']; */ ?>" id="imag"> -->
+                    <div class="rigthRound" id="upload">
+
+                        <input type="file" name="fileImg" id="fileImg" accept=".jpg, .jpeg, .png">
+                        <i class="fa fa-camera"></i>
+                    </div>
+                    <div class="leftRound" id="cancel" style="display: none;">
+                        <i class="fa fa-times"></i>
+
+                    </div>
+                    <div class="rigthRound" id="confirm" style="display: none;">
+                        <input type="submit" name="profimg" value="">
+                        <i class="fa fa-check"></i>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="profileSeding">
+            <h1 class="userName">username</h1>
+            <h4 class="userName1">email</h4>
+            <button class="btn profile-edit-btn" id="toggle-profile-edit-btn">Edit Profile</button>
+        </div>
+
+        <div id="profile-edit-modal" class="modal" style="margin-top: 76px; display: none;">
+            <div class="modal-content">
+                <span class="close-btn">×</span>
+                <h1>Edit Profile</h1>
+                <form method="post" action="profille.html">
+
+
+                    <div class="form-group">
+                        <label for="full_name">Username</label>
+                        <input type="text" id="full-name" name="Username" value="" readonly>
+                        <label for="username">New User Name</label>
+                        <input type="text" id="username" name="Full_Name" required>
+                        <button name="chaing_name" class="save-btn">save change</button>
+
+                    </div>
+                </form>
+                <form method="post" action="profille.html">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <button name="chain_email" class="save-btn">save change</button>
+
+                    </div>
+                </form>
+                <!--  <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <button type="button" class="save-btn">save change</button>
+
+                    </div> 
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address">
+                        <button type="button" class="save-btn">save change</button>
+
+                    </div>-->
+                <form method="post" action="profille.html">
+                    <div class="form-group">
+
+                        <label for="current-password">Current Password</label>
+                        <input type="password" id="current-password" name="current_password" required>
+                        <label for="new-password">New Password</label>
+                        <input type="password" id="new-password" name="new_password" required>
+                        <label for="confirm-password">Confirm New Password</label>
+                        <input type="password" id="confirm-password" name="confirm_password" required>
+                        <button name="chaing_password" class="save-btn">save change</button>
+                </form>
+            </div>
+            <form method="post" action="profille.html">
+                <div class="form-buttons">
+
+
+                    <button type="submit" name="delet_accont" class="delete-btn">Delete Account</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </section>
+    <hr>
+
+    <section class="blog" id="blog">
+        <div class="heading">
+
+            <h3>Your Order</h3>
+        </div>
+
+        <div class="wa">
+
+            <div class="card shop-content" id="menu">
+                <img src="img/3.png" alt="Photo 1" class="product-img" draggable="false">
+                <h3 class="product-title">food_name</h3>
+                <p class="price" id="prix"> food_price DA
+
+                </p>
+                <form action="./cartandpay/shop-cart.html" method="post">
+                    <input type="hidden" name="res_id" value="">
+                    <input type="hidden" name="food_id" value="">
+                    <input type="hidden" name="name" value="">
+                    <input type="hidden" name="price" value="">
+                    <input type="hidden" name="image" value="">
+                    <input type="hidden" name="quintity" value="1" />
+                    <button type="submit" class="ordern add-cart" name="cart_profile">Order New</button>
+                </form>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+    </section>
+    <!---------------   change password --------------->
+
+
+
+
+    <div class="artical" id="artical">
+        <h2 class="main-tit">Cart of Reservation</h2>
+        <div class="div-Cart">
+            <div class="voucher">
+                <div class="left-section">
+                    <div class="amount">Your resevation</div>
+                    <!--  <button>Delet Reservation</button> -->
+                </div>
+                <img src="R (2).png" alt="Ribbon" class="ribbon">
+                <div class="right-section">
+                    <div class="company-name">Restaurant: nom </div>
+                    <div class="voucher-text">&ensp; We are honorded by your visit : fname lname On 2025 8:00 <br>
+                        resavation for : parti_size </div>
+                    <div class="description-res"> </div>
+                    <div class="company-name-bottom"><span style="font-weight: 800; ">contact: </span> email<span
+                            style="font-weight: 800; "> | </span>phone</div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!------team of work----------->
+        <div class="team" id="team">
+            <h2 class="main-tit">Restaurant Adminstration</h2>
+            <div style=" padding-bottom:82px;   grid-template-columns: repeat(auto-fill, minmax(386px, 1fr));
+    gap: 120px;" class="container">
+                <div style="margin-left: -103px;" class="boxf">
+                    <div class="data">
+                        <img style="width: 520px;
+    height: 304px;
+    margin-left: 59px;" src="img/rest.jpg" alt="">
+
+                    </div>
+                    <div class="info">
+                        <h3>MailsBox</h3>
+                        <p>woek to work.</p>
+                    </div>
+                </div>
+
+                <div class="boxf">
+                    <div class="data">
+                        <img style="width: 315px;
+    height: 247px;" src="" alt="">
+                        <div class="socia">
+                            <a><i class='fas fa-star' style='color: gold;width:20px; '></i> </a>
+
+                        </div>
+
+                    </div>
+                    <div class="info">
+                        <!--   <h1> <img src="img/restaurant.png" style="width: 20px; height: 26px;" alt="facebook" class="imgff" > Your Resturant:</h1><br>
+                      -->
+                        <h3><img src="img/restaurant.png" style="width: 20px; height: 26px;" alt="facebook"
+                                class="imgff"> nom</h3>
+                        <p>description</p>
+                        <form style=" background-color: transparent; height: 5px;" action="dashbord.html" method="post">
+                            <input type="hidden" name="Resturant_id" value="">
+                            <button name="Visit_admin" style="margin-top: 41px;margin-left: -47px; width: 262px;"
+                                type="submit"> visit</button>
+                        </form>
+                    </div>
+                </div>
+                <!--    <div class="boxf">
+                <div class="data">
+                    <img src="file/man.png" alt="">
+                    <div class="socia">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Name</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="boxf">
+                <div class="data">
+                    <img src="file/man.png" alt="">
+                    <div class="socia">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Name</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="boxf">
+                <div class="data">
+                    <img src="file/man.png" alt="">
+                    <div class="socia">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Name</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="boxf">
+                <div class="data">
+                    <img src="file/man.png" alt="">
+                    <div class="socia">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Name</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="boxf">
+                <div class="data">
+                    <img src="file/man.png" alt="">
+                    <div class="socia">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Name</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </div>
+            <div class="boxf">
+                <div class="data">
+
+                    <img src="file/man.png" alt="">
+                    <div class="socia">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Name</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </div> -->
+            </div>
+        </div>
+
+
+        <!--  <div style="background-color: white;" class="team" id="team">
+            <h2 class="main-tit">Chaing the parametre of the conte</h2>
+            <div style="    grid-template-columns: repeat(auto-fill, minmax(386px, 1fr));
+                            gap: 120px;" class="container">-->
+
+
+    </div>
+    </div>
+
+    <script src="./menu/menutogle.js" defer></script>
+    <script src="./javascript/cart2.js" defer></script>
+    <script src="./javascript/order.js" defer></script>
+    <script src="./menu/ingredient.js" defer></script>
+    <!--   <script src="payment.js" defer></script> -->
+    <script src="./menu/scrole.js" defer></script>
+
+
+    <script src="./javascript/js.js" defer></script>
+    <script src="./javascript/profile.js" defer></script>
+    <script src="./javascript/maindra.js" defer></script>
+    <script src="./javascript/menutogle.js" defer></script>
+    <script src="./javascript/cart.js" defer></script>
+    <script type="text/javascript">
+        document.getElementById("fileImg").onchange = function () {
+            document.getElementById("imag").src = URL.createObjectURL(fileImg.files[0]);
+
+            document.getElementById("cancel").style.display = "block";
+            document.getElementById("confirm").style.display = "block"
+            document.getElementById("upload").style.display = "none";
+
+        }
+        var usrimage = document.getElementById('imag').src;
+        document.getElementById("cancel").onclick = function () {
+            document.getElementById("imag").src = usrimage;
+
+            document.getElementById("cancel").style.display = "none";
+            document.getElementById("confirm").style.display = "none"
+            document.getElementById("upload").style.display = "block";
+
+
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        /************************** */
+        var modal = document.getElementById("profile-edit-modal");
+
+        var btn = document.getElementById("toggle-profile-edit-btn");
+
+        var span = document.getElementsByClassName("close-btn")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            console.log(event.target)
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+
+        }
+    </script>
+    <footer style="     margin-top: 0px;">
+        <ul class="iconSocial">
+            <li class="liH"><a href="https://www.facebook.com/Raouf.Bh" target="_blank"><img src="img/facebook.png"
+                        alt="facebook" class="imgf"></a></li>
+            <li class="liH"><a href="#"><img src="img/twitter.png" alt="twitter" class="imgf"></a></li>
+            <li class="liH"><a href="#"><img src="img/linkedin.png" alt="linkedin" class="imgf"></a></li>
+            <li class="liH"><a href="#"><img src="img/instagram.png" alt="instagram" class="imgf"></a></li>
+        </ul>
+
+        <ul class="mene">
+            <li class="liH"><a href="home.html">Home</a></li>
+            <li class="liH"><a href="menu.html">Menu</a></li>
+            <li class="liH"><a href="about.html">About</a></li>
+            <li class="liH"><a href="#">team</a></li>
+            <li class="liH"><a href="#contact">Contact</a></li>
+        </ul>
+        <P>©2024 Bouhadja Raouf | All Rights Reserved.</P>
+    </footer>
+
+</body>
+
+</html>

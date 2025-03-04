@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="shortcut icon" type="x-icon" href="img/Logo Food2.png">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="./menu/stylepopup.css">
+    <link rel="stylesheet" href="./menu/styleReserve.css">
+    <link rel="stylesheet" href="./menu/styleOrder.css">
+    <style>
+        .Logout {
+            padding: 12px;
+            padding: 0;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: transparent !important;
+            pointer-events: painted;
+        }
+    </style>
+    <title>food</title>
+
+    <script>
+        var count = 0;
+
+        function calculeNumbers(output) {
+            count++;
+            var output = ' ' + count;
+
+            document.getElementById("numbers").innerHTML = output;
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <header class="header headerH" data-header>
+        <nav class="navbar">
+            <img class="logo" src="img/Logo4.png">
+
+            <ul class="nav__links">
+                <li class="nav-item liH">
+                    <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                </li>
+
+                <li class="nav-item liH">
+                    <a href="./menu/menu.html?All_Menu=Get_All_menu" class="navbar-link" data-nav-link>Menu</a>
+                </li>
+
+
+                <li class="nav-item liH">
+                    <a href="Resturant_page.html" class="navbar-link" data-nav-link>Restaurant</a>
+                </li>
+
+
+
+            </ul>
+            <!-- <div class="butt"><a class="btt">login</a>
+                  <a href="LOGIN.html" class="btt">singup</a></div> -->
+
+            <a style="margin-left:87px;" href="LOGIN.html"><button class="login buttonH">Log in</button></a>
+
+            <div class="cartn">
+                <div>
+                    <a href="#" class="or" id="cart-icon"><img src="img/restaurant.png" alt="facebook" class="imgff"
+                            id="cart-icon"></a>
+
+                    <p id="numbers" class="count"></p>
+
+                </div>
+
+            </div>
+
+            <!--////////////////////CART//////////////////////////////////////////////-->
+            <div class="cart">
+                <h2 class="cart-title">Your cart</h2>
+
+                <div class="cart-content">
+
+                    <div class="cart-box">
+                        <img src="img/Beef Stew.jpg" alt="" class="cart-img">
+                        <input type="hidden" class="food_id" value="">
+                        <input type="hidden" class="rest_id" value="">
+                        <input type="hidden" class="number_item" value="">
+
+                        <div class="detail-box">
+                            <div class="cart-product-title"></div>
+                            <div class="cart-price"> DA</div>
+                            <input type="number" value="" class="cart-quantity">
+                        </div>
+                        <form>
+                            <input type="hidden" name="food_id" value="">
+
+                            <button type="submit" class="remove" name="remove"><span class="material-symbols-outlined ">
+                                    delete
+                                </span> </button>
+                        </form>
+                    </div>
+
+
+
+                </div>
+
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price"> DA</div>
+                </div>
+
+                <a class="btn-buy buttonH">Buy Now</a>
+
+                <span class="material-symbols-outlined spanH close-cartH" id="close-cart">
+                    close
+                </span>
+
+            </div>
+
+
+            <div class="profileimg" onclick="menuToggle();">
+                <a class="profile" href="#"> <img src="data:image/jpeg;base64,' . $base64_user_image . '" alt="profile"
+                        class="imgp"></a>
+            </div>
+
+
+
+
+
+            <div class="menu">
+                <ul>
+                    <li class="liH"><img src="img/profile.png"><a href="profile.html">view profile</a> </li>
+
+                    <li class="liH"> <img src="img/fav.png"><a href="Favorites.html">Favorites</a> </li>
+                    <li class="liout liH"> <img src="img/logout.png">
+                        <form>
+                            <input class="Logout" type="submit" value="Logout" name="logout">
+                        </form><!-- <a href="?logout">Log out</a> -->
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+
+
+
+
+        </div>
+
+
+
+
+
+    </header>
+
+    <!--////////////////////////////////////////////////ORDER FORM:::::::::::::::::::::::::::::///////////////////////////////////////////////////////-->
+
+
+
+
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+    <!--//////////////////////////bottom navbar///////////////////////////////-->
+    <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+            <li class="nav__item liH">
+                <a href="#home" class="nav__link active-link">
+                    <img class="nav__icon" src="img/home.png">
+                    <span class="nav__name spanH">Home</span>
+                </a>
+            </li>
+
+            <li class="nav__item liH">
+                <a href="menu.html" class="nav__link">
+                    <span class="material-symbols-outlined spanH">
+                        restaurant
+                    </span>
+                    <span class="nav__name spanH">Menu</span>
+                </a>
+            </li>
+
+            <li class="nav__item liH">
+                <a href="#" class="nav__link">
+                    <span class="material-symbols-outlined nav__icon spanH">
+                        person
+                    </span>
+                    <span class="nav__name spanH">About</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+
+    <!--////////////////////////////////////////////////ORDER FORM:::::::::::::::::::::::::::::///////////////////////////////////////////////////////-->
+    <div class="FormOrder">
+        <form class="popup-content2">
+            <div class="closeOrder">
+                <span class="material-symbols-outlined" id="close-cart">
+                    close
+                </span>
+            </div>
+            <div class="headForm">
+                <div class="titleForm ">
+                    <h3>The Green Corner</h3>
+                </div>
+
+
+
+            </div>
+
+            <div class="select-menuForm">
+
+                <div class="contactForm">
+                    <div class="contct">
+                        <span id="left" class="material-symbols-outlined y">
+                            arrow_back_ios
+                        </span>
+                        <h4>Contact</h4>
+                    </div>
+
+                    <div class="box1">
+
+
+
+                        <div class="boxInput">
+                            <label>first name</label>
+
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                                <input class="name inputF" type="text" id="fname" name="fname" required>
+                                <input type="hidden" id="totalNumberinput" name="totalNumber" value="">
+                            </div>
+                        </div>
+
+                        <div class="boxInput">
+                            <label>last name</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+
+                                <input class="nom inputF" type="text" id="lname" name="lname" required>
+                            </div>
+                        </div>
+
+                        <div class="boxInput"> <label>Phone</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    call
+                                </span>
+                                <input class="inputF" type="tel" id="phone" name="phone"
+                                    placeholder="+213 6 56 92 38 27" required>
+                            </div>
+                        </div>
+
+                        <div class="boxInput">
+                            <label>Email</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    mail
+                                </span>
+                                <input class="inputF" type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="box2">
+
+                        <div class="boxInput">
+                            <label>Address</label>
+                            <div class="icon">
+
+                                <input class="comment inputF" type="text" id="address" name="address" required>
+                            </div>
+                        </div>
+                        <div class="boxInput">
+                            <label>COMMENTS,ALLERGIES AND EATING HABITS (optional)</label>
+                            <div class="icon">
+
+                                <input class="comment inputF" type="text" id="comments" name="comments">
+                            </div>
+                        </div>
+
+                        <!--  <div class="boxInput">
+                            <label>YOUR GIFT CODE (optional)</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    redeem
+                                </span>
+                                <input class="gift inputF" type="text" id="giftCode" name="giftCode">
+                            </div>
+                        </div> -->
+
+                        <div class="boxInput PaymentOption">
+                            <label>Payment Method</label>
+                            <div class="icon">
+
+                                <div class="payment-options">
+                                    <div class="paymentC">
+                                        <input class="paymentCash" type="radio" id="cod" name="paymentMethod"
+                                            value="cod" required>
+                                        <label class="PaymentLabel" for="cod">Cash on Delivery</label>
+                                    </div>
+                                    <div class="paymentL">
+                                        <input class="paymentenlign" type="radio" id="online" name="paymentMethod"
+                                            value="online" required>
+                                        <label class="PaymentLabel" for="online">Payment Online</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chekOrder">
+                            <div class="checkbox-group">
+                                <input class="inputF" type="checkbox" id="checkbox1" name="checkbox1">
+                                <label for="checkbox1">Save this information to facilitate my future order.</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reserveButtonOrder">
+                        <button type="submit" name="cash_order">Confirm Order</button>
+                    </div>
+                    <div class="paymentButtonOrder">
+                        <button type="submit" name="paypal">Payment</button>
+
+                    </div>
+
+                </div>
+
+                <div class="Orders">
+
+                    <div class="Orderinfo">
+
+                        <div class="OrderHead">
+                            <h3>Your Orders.</h3>
+                            <h4><a class="modifyOrder">Modify</a></h4>
+                        </div>
+
+                        <div class="OrderContent">
+
+
+                            <div class="cart-content2">
+                                <img src="img/backimg.jpg" alt="not found" class="img-order">
+                                <div class="detail-order">
+                                    <div class="product-title">namespace</div>
+                                    <div class="product-quantity">
+                                        quantity: <span class="quantityNum"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="Orderbottom">
+                            <h4 class="TotalN">Total:</h4>
+                            <span class="totalNumber" id="totalNumber" name="totalNumber">0 DA</span>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+    </div>
+
+    <!--///////////////////////////////////////////////////////////payment form/////////////////////////////////////////////////////////-->
+
+    <!--/////////////////////////////////////Reservation///////////////////////////////////////////////////////////////-->
+    <div class="center">
+        <div class="popup">
+            <form action="" method="post" class="popup-content">
+                <div class="head">
+                    <div class="close">
+                        <span class="material-symbols-outlined" id="close-">
+                            close
+                        </span>
+                    </div>
+
+                    <div class="titlePopup">
+                        <h3 class="titleres">The Green Corner</h3>
+                    </div>
+
+                    <div class="subtitle">
+                        <p> Dear customers, the entire team at The Green Corner is pleased to welcome you. We kindly ask
+                            you to respect the schedule of your reservation.
+
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="select-menu">
+
+
+
+                    <div class="select-btn">
+                        <span class="material-symbols-outlined colon">
+                            local_dining
+                        </span>
+                        <span class="sBtn-text">
+
+                        </span>&nbspguests
+                        <span class="spacer"></span>
+                        <span class="material-symbols-outlined">
+                            expand_more
+                        </span>
+                    </div>
+
+
+                    <ul class="converts">
+                        <li class="convert">1</li>
+                        <li class="convert">2</li>
+                        <li class="convert">3</li>
+                        <li class="convert">4</li>
+                        <li class="convert">5</li>
+                        <li class="convert">6</li>
+                        <li class="convert">7</li>
+                        <li class="convert">8</li>
+                        <li class="convert">9</li>
+                        <li class="convert">+</li>
+                    </ul>
+                    <div class="select-btnn">
+                        <span class="material-symbols-outlined colon">
+                            calendar_month
+                        </span>
+                        <span class="select-selected">
+
+                        </span>
+                        <span class="spacer"></span>
+                        <span class="material-symbols-outlined">
+                            expand_more
+                        </span>
+                    </div>
+
+                    <div class="custom-select">
+
+                        <div class="calendar" id="calendar">
+                            <header>
+                                <h3></h3>
+                                <nav>
+                                    <button id="prev"></button>
+                                    <button id="next"></button>
+                                </nav>
+                            </header>
+                            <section>
+                                <ul class="days">
+                                    <li>Sun</li>
+                                    <li>Mon</li>
+                                    <li>Tue</li>
+                                    <li>Wed</li>
+                                    <li>Thu</li>
+                                    <li>Fri</li>
+                                    <li>Sat</li>
+                                </ul>
+                                <ul class="dates"></ul>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="select-btnn2">
+                        <span class="material-symbols-outlined colon">
+                            schedule
+                        </span>
+                        <span class="hour">
+                            Horaire
+                        </span>
+                        <span class="hour-forme"></span>
+                        <span class="material-symbols-outlined">
+                            expand_more
+                        </span>
+                    </div>
+
+                    <ul class="times">
+
+                        <li class="breakfast">Breakfast</li>
+                        <li class="time breakfas" onclick="setValue(this)">
+                            <div class="green-circle"></div>08:00
+                        </li>
+                        <li class="time breakfas" onclick="setValue(this)">
+                            <div class="green-circle"></div>08:30
+                        </li>
+                        <li class="time breakfas" onclick="setValue(this)">
+                            <div class="green-circle"></div>09:00
+                        </li>
+                        <li class="time breakfas" onclick="setValue(this)">
+                            <div class="green-circle"></div>09:30
+                        </li>
+                        <li class="time breakfas" onclick="setValue(this)">
+                            <div class="green-circle"></div>10:00
+                        </li>
+                        <li class="time breakfas" onclick="setValue(this)">
+                            <div class="green-circle"></div>10:30
+                        </li>
+                        <li class="time breakfas" onclick="setValue(this)">
+                            <div class="green-circle"></div>11:00
+                        </li>
+                        <script>
+                            function setValue(element) {
+                                var value = element.textContent;
+                                document.getElementById("myInput").value = value;
+                                document.querySelector('.hour-form').textContent = value;
+                                document.querySelector('.hour-forme').textContent = value;
+                            }
+                        </script>
+
+                        <li class="lunch">Lunch</li>
+                        <li class="time lunc">
+                            <div class="green-circle" onclick="setValue(this)"></div>11:30
+                        </li>
+                        <li class="time lunc" onclick="setValue(this)">
+
+                            <div class="green-circle"></div>12:00
+                        </li>
+                        <li class="time lunc" onclick="setValue(this)">
+                            <div class="green-circle"></div>12:30
+                        </li>
+                        <li class="time lunc" onclick="setValue(this)">
+                            <div class="green-circle"></div>13:00
+                        </li>
+
+
+                        <li class="dinner">Dinner</li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>18:00
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>18:30
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>19:00
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>19:30
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>20:00
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>20:30
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>21:00
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>21:30
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>22:00
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>22:30
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>23:00
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>23:30
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>00:00
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>00:30
+                        </li>
+                        <li class="time dinne" onclick="setValue(this)">
+                            <div class="green-circle"></div>01:00
+                        </li>
+
+
+                    </ul>
+
+
+
+
+
+                </div>
+
+                <div class="btns">
+                    <button class="btnReserve" name="res" type="button">reserve table</button>
+                </div>
+
+
+
+            </form>
+
+        </div>
+    </div>
+
+    <!--//////////////////////////////.........formreservation.......///////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div class="popupForm">
+        <form action="" method="post" class="popup-content3">
+            <div class="closeForm">
+                <span class="material-symbols-outlined" id="close-">
+                    close
+                </span>
+            </div>
+            <div class="headForm">
+                <div class="titleForm ">
+                    <h3>The Green Corner</h3>
+                </div>
+            </div>
+            <div class="select-menuForm">
+                <div class="contactForm">
+                    <div class="contct">
+                        <span id="left" class="material-symbols-outlined y">
+                            arrow_back_ios
+                        </span>
+                        <h4>Contact</h4>
+                    </div>
+                    <div class="box1">
+                        <div class="boxInput">
+                            <label>first name</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                                <input class="name inputF" type="text" id="fname" name="fname" required>
+                            </div>
+                        </div>
+                        <div class="boxInput">
+                            <label>last name</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                                <input class="nom inputF" type="text" id="lname" name="lname" required>
+                            </div>
+                        </div>
+
+                        <div class="boxInput"> <label>Phone</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    call
+                                </span>
+                                <input class="inputF" type="tel" id="name" name="name" placeholder="+213 6 56 92 38 27"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="boxInput">
+                            <label>Email</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    mail
+                                </span>
+                                <input class="inputF" type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="box2">
+
+                        <div class="boxInput">
+                            <label>COMMENTS,ALLERGIES AND EATING HABITS (optional)</label>
+                            <div class="icon">
+
+                                <input name="commet" class="comment inputF" type="text">
+                            </div>
+                        </div>
+
+                        <div class="boxInput">
+                            <label>YOUR GIFT CODE (optional)</label>
+                            <div class="icon">
+                                <span class="material-symbols-outlined">
+                                    redeem
+                                </span>
+                                <input class="gift inputF" name="" type="text">
+                            </div>
+                        </div>
+                        <div class="chek">
+                            <div class="checkbox-group">
+                                <input class="inputF" type="checkbox" id="checkbox1" name="checkbox1">
+                                <label for="checkbox1">Save this information to facilitate my future
+                                    reservations.</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input class="inputF" type="checkbox" id="checkbox2" name="checkbox2">
+                                <label for="checkbox2">Sign me up to receive dining offers and news from this restaurant
+                                    by email.</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input class="inputF" type="checkbox" id="checkbox3" name="checkbox3">
+                                <label for="checkbox3">Yes, I want to get text updates and reminders about my
+                                    reservations.</label>
+                            </div>
+                        </div> -->
+
+
+
+                    </div>
+
+                    <div class="reserveButton">
+                        <input type="hidden" name="" class="select-selectedinput">
+
+
+                        <input type="hidden" name="numbre" class="sBtn-textForm">
+
+                        <input type="hidden" name="hour" id="myInput">
+
+                        <button class="buttonForm" name="getTab" type="submit">Reserve</button>
+                    </div>
+
+                </div>
+                <div class="reservation">
+
+                    <div class="reserveinfo">
+                        <div class="reserveHead">
+                            <h3>Your reservation.</h3>
+                            <h4><a class="modifyReserve">Modify</a></h4>
+                        </div>
+
+                        <div class="reserveContent">
+
+                            <div class="guest">
+                                <span class="material-symbols-outlined colon">
+                                    local_dining
+                                </span>
+                                <span class="sBtn-text">
+                                    2
+                                </span>
+
+
+
+                            </div>
+
+                            <div class="calendarForm">
+                                <span class="material-symbols-outlined colon">
+                                    calendar_month
+                                </span>
+                                <span class="select-selectedForm">
+                                </span>
+
+                            </div>
+
+                            <div class="hore">
+                                <span class="material-symbols-outlined colon">
+                                    schedule
+                                </span>
+                                <span class="hour-form">
+                                    12:30
+                                </span>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    </form>
+    </div>
+
+    <!--//////////////////////////////HOME///////////////////////////-->
+
+    <section class="home sectionH" id="home">
+
+
+        <div class="home-text">
+            <span class="we spanH">Welcome To</span>
+            <h1>&nbsp&nbspMealB<span class="textlOGO spanH">ox</span></h1>
+            <h2>We're here to bake you <br>happy!</h2>
+            <a href="./menu/menu.html" class="btn"><button class="buttonH">Order Now</button> </a>
+        </div>
+
+
+        <div class="home-img">
+            <img class="imgr" src="img/table.png" alt="loading">
+
+        </div>
+
+    </section>
+
+
+    <!--////////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <section class="blogs sectionH" id="blogs">
+        <a href="menu.html">
+            <h2 class="main-tit">our latest posts</h2>
+        </a>
+        <div class="heading">
+
+
+        </div>
+        <span id="left" class="material-symbols-outlined y spanH">
+            arrow_back_ios
+        </span>
+        <div class="w">
+
+
+            <div class="card  shop-content">
+                <img src="img/Chicken Curry2.jpg" alt="Photo 1" class="product-img" draggable="false">
+                <h3 class="product-title">food_name; ?></h3>
+                <p class="price" id="prix">food_price DA</h3>
+                </p>
+                <form>
+                    <input type="hidden" name="res_id" value="">
+                    <input type="hidden" name="food_id" value="">
+                    <input type="hidden" name="name" value="">
+                    <input type="hidden" name="price" value="">
+                    <input type="hidden" name="image" value="">
+                    <input type="hidden" name="quintity" value="1" />
+                    <!-- <button  class="ordern add- buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>  -->
+                    <button
+                        style="margin: auto;margin-top: -30px; margin-left: 19px; margin-right: 25px;padding-right: 45px;padding-left: 40px;"
+                        type="submit" class="ordern add-cart buttonH" name="cart_add">Order New</button>
+                </form>
+            </div>
+
+
+        </div>
+        <span id="right" class="material-symbols-outlined y spanH">
+            arrow_forward_ios
+        </span>
+
+
+    </section>
+
+    <!----------------------- Resturant cart ----------------------->
+    <div class="artical" id="artical">
+        <h2 class="main-tit">Resturant</h2>
+        <div class="container">
+            <div class="box">
+                <img src="data:image/jpeg;base64,' . $base64_image . '" alt="">
+                <div class="content">
+                    <h3> nom </h3>
+                    <p>description & location <br>
+                        <i class='fas fa-star' style='color: gold;'></i><i class="fas fa-star-half-alt"
+                            style="color: gold;"></i>
+                    </p>
+                </div>
+                <div class="inf">
+                    <form>
+                        <input type="hidden" name="res_id" value="">
+                        <button class="Logout" name="visit" type="submit">Visit us</button>
+                    </form><i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="imageSite/chaina1.jpeg" alt="">
+                <div class="content">
+                    <h3>Text titel</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+                <div class="inf">
+                    <a href="">Red More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imageSite/France.jpeg" alt="">
+                <div class="content">
+                    <h3>Text titel</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+                <div class="inf">
+                    <a href="">Red More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imageSite/italy.jpeg" alt="">
+                <div class="content">
+                    <h3>Text titel</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+                <div class="inf">
+                    <a href="">Red More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imageSite/dH3CSYKoly-Annajah.jpg_729x410.jpg" alt="">
+                <div class="content">
+                    <h3>Text titel</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+                <div class="inf">
+                    <a href="">Red More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imageSite/download (3).jpeg" alt="">
+                <div class="content">
+                    <h3>Text titel</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+                <div class="inf">
+                    <a href="">Red More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imageSite/images (11).jpeg" alt="">
+                <div class="content">
+                    <h3>Text titel</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+                <div class="inf">
+                    <a href="">Red More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+            <div class="box">
+                <img src="imageSite/Dbay.jpeg" alt="">
+                <div class="content">
+                    <h3>Text titel</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                </div>
+                <div class="inf">
+                    <a href="">Red More</a>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-----------------------End Resturant cart ----------------------->
+    <!------Prising------>
+    <div class="Pricing" id="Pricing">
+        <a href="Host.html" style="text-decoration: none; color: black;">
+            <h2 class="main-tit">Hosting</h2>
+        </a>
+        <div class="container">
+            <div class="box">
+                <h3 class="titel">Monthly</h3>
+                <img src="img/machine-learning.png" alt="">
+                <h3> </h3>
+                <div class="price">
+                    <form>
+                        <input type="hidden" value="2" name="type_hosting">
+                        <span class="amonunt">4000DA</span>
+                        <span class="time">Per Month</span>
+                </div>
+                <ul>
+                    <li>Receiving Orders and Reservations</li>
+                    <li>Order Management</li>
+                    <li>10 Tables For resirf on line</li>
+                    <li>50 Dishes For Order</li>
+                    <li>Basic Support</li>
+                </ul>
+
+                <button style="background-color: transparent;" type="submit" name="get_host"><a
+                        style="cursor: pointer;"> Choose Plan </a> </button>
+                </form>
+            </div>
+            <div class="box popular">
+                <div class="label">Most Popular</div>
+                <h3 class="titel">Monthly Premim</h3>
+                <img src="img/machine-learning.png" alt="">
+                <div class="price">
+                    <form>
+                        <input type="hidden" value="3" name="type_hosting">
+                        <span class="amonunt">6000DA</span>
+                        <span class="time">Per Month</span>
+                </div>
+                <ul>
+                    <li>Receiving Orders and Reservations</li>
+                    <li>Order Management</li>
+                    <li>20 Tables For resirf on line</li>
+                    <li>100 Dishes For Order</li>
+                    <li>Basic Support</li>
+                </ul>
+                <button style="background-color: transparent;" type="submit" name="get_host"><a
+                        style="cursor: pointer;"> Choose Plan </a> </button>
+                </form>
+            </div>
+            <div class="box">
+                <h3 class="titel">Yearly</h3>
+                <img src="img/machine-learning.png" alt="">
+                <div class="price">
+                    <form>
+                        <input type="hidden" value="1" name="type_hosting">
+                        <span class="amonunt">13500DA</span>
+                        <span class="time">Per Year</span>
+                </div>
+                <ul>
+                    <li>Receiving Orders and Reservations</li>
+                    <li>Order Management</li>
+                    <li>50 Tables For resirf on line</li>
+                    <li>200 Dishes For Order</li>
+                    <li>Basic Support</li>
+                </ul>
+                <button style="background-color: transparent;" type="submit" name="get_host"><a
+                        style="cursor: pointer;"> Choose Plan </a> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--Start Galory-->
+    <div class="Galory">
+        <h2 class="main-tit">Galory</h2>
+        <div class="container">
+            <div class="boxg">
+                <div class="imag">
+                    <a href="pagerestaurant.html?restaurant="><img src="" alt=""></a>
+                </div>
+
+            </div>
+
+            <div class="boxg">
+                <div class="imag">
+                    <img src="imageSite/images (5).jpeg" alt="">
+                </div>
+
+            </div>
+            <div class="boxg">
+                <div class="imag">
+                    <img src="imageSite/images (17).jpeg" alt="">
+                </div>
+
+            </div>
+            <div class="boxg">
+                <div class="imag">
+                    <img src="imageSite/download (3).jpeg" alt="">
+                </div>
+
+            </div>
+            <div class="boxg">
+                <div class="imag">
+                    <img src="imageSite/images (5).jpeg" alt="">
+                </div>
+
+            </div>
+            <div class="boxg">
+                <div class="imag">
+                    <img src="imageSite/images (17).jpeg" alt="">
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <!--End Galory-->
+    <!--///////////////////////////////////////FOOTER////////////////////////////////////////////////////////-->
+    <!---///////////////////////////////////CONTACT////////////////////////////////////////////////////////////////-->
+    <div class="upper" id="contact">
+        <h2 class="main-tit">Contact</h2>
+        <section class="homeC sectionH">
+
+
+
+            <div class="contactus">
+
+                <h2 class="title">Our information</h2>
+                <h3 class="pr">Fill up the form and our team will get back to <br>you within 24 hours.</h3>
+
+                <ul class="info">
+                    <li class="liH">
+                        <i><img src="img/telephone.png" alt="facebook" class="imgff"></i>
+                        <span class="spanH">Phone:&nbsp&nbsp&nbsp </span><a href="tel:+213656923827">+213656923827</a>
+                    </li>
+                    <li class="liH">
+                        <i><img src="img/mail.png" alt="facebook" class="imgff"></i>
+                        <span class="spanH">Email:&nbsp&nbsp&nbsp&nbsp</span><a
+                            href="mailto:info@food.com">info@food.com</a>
+                    </li>
+                </ul>
+
+                <ul class="social">
+                    <li class="liH">
+                        <a href="https://www.facebook.com/Raouf.Bh" target="_blank">
+                            <img src="img/facebook.png" alt="facebook" class="imgff">
+                        </a>
+                    </li>
+                    <li class="liH">
+                        <a href="#">
+                            <img src="img/twitter.png" alt="twitter" class="imgff">
+                        </a>
+                    </li>
+                    <li class="liH">
+                        <a href="#">
+                            <img src="img/instagram.png" alt="instagram" class="imgff">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="contact" id="contact">
+                <form class="contact-form" method="post" id="contact-form">
+                    <div>
+                        <label class="labelH" for="name">Name:</label>
+                        <input class="inputHO" type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label class="labelH" for="email">Email:</label>
+                        <input class="inputHO" type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label class="labelH" for="object">Object:</label>
+                        <textarea id="object" name="object" required></textarea>
+                    </div>
+                    <div>
+                        <label class="labelH" for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button class="buttonH" name="sentmessag" type="submit">Send</button>
+                </form>
+            </div>
+
+
+        </section>
+    </div>
+
+
+
+    </section>
+    <footer>
+        <ul class="iconSocial">
+            <li class="liH"><a href="https://www.facebook.com/Raouf.Bh" target="_blank"><img src="img/facebook.png"
+                        alt="facebook" class="imgf"></a></li>
+            <li class="liH"><a href="#"><img src="img/twitter.png" alt="twitter" class="imgf"></a></li>
+            <li class="liH"><a href="#"><img src="img/linkedin.png" alt="linkedin" class="imgf"></a></li>
+            <li class="liH"><a href="#"><img src="img/instagram.png" alt="instagram" class="imgf"></a></li>
+        </ul>
+
+        <ul class="mene">
+            <li class="liH"><a href="home.html">Home</a></li>
+            <li class="liH"><a href="menu.html">Menu</a></li>
+            <li class="liH"><a href="about.html">About</a></li>
+            <li class="liH"><a href="#">team</a></li>
+            <li class="liH"><a href="#contact">Contact</a></li>
+        </ul>
+        <P>©2024 Bouhadja Raouf | All Rights Reserved.</P>
+    </footer>
+
+
+
+
+    <script src="./javascript/js.js" defer></script>
+    <script src="./javascript/maindra.js" defer></script>
+    <script src="./javascript/menutogle.js" defer></script>
+    <script src="./javascript/cart2.js" defer></script>
+    <script src="./javascript/down.js" defer></script>
+    <script src="./javascript/script1.js" defer></script>
+    <script src="./javascript/order.js" defer></script>
+    <!--  <script src="./javascript/payment.js" defer></script> -->
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+{
+    "require": {
+        "paypal/rest-api-sdk-php": "^1.14",
+        "chargily/chargily-pay": "^2.0",
+        "chargily/epay-php": "^3.0",
+        "guzzlehttp/guzzle": "^7.8"
+    }
+}

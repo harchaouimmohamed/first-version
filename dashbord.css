@@ -1,0 +1,1759 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+
+:root{
+    --blue: #2a2185;
+    --white: #ffffff;
+    --whit: #ffffff00;
+    --gray: #f5f5f5;
+    --black: #222;
+    --black2: #999;
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      
+      border: none;
+     
+  }
+  body{
+    overflow: auto;
+  }
+
+.container{
+    font-family: "Ubuntu", sans-serif;
+   
+  
+    box-sizing: border-box;
+    min-height: 100vh;
+  
+    position: relative;
+    width: 100%;
+}
+
+.navigation{
+    margin: 0;
+    position: fixed;
+   
+    width: 80px;
+    height: 100%;
+    background: #f7f6ca;
+    border-left: 10px solid #f7f6ca;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.navigation.active{
+   
+    width: 300px;
+}
+
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+
+}
+
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered{
+    background-color: var(--white);
+}
+
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--black);
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a{
+color: #fb1c0d;
+}
+
+
+.logobrand{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    top: 12px;
+    right: 10px;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+
+.icon .iconave {
+    font-size: 3rem;
+    margin-top: 16px;
+    opacity: 10;
+    
+}
+
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: 60px;
+}
+
+.SignOut{
+  margin-top: 180px;
+
+}
+
+
+
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+
+}
+
+
+
+.main {
+    position: absolute;
+  
+    width: calc(100% - 80px);
+    left: 80px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.4s;
+    overflow: auto;
+ 
+}
+
+.main.active{
+  
+    width: calc(100% - 300px);
+    left: 300px;
+}
+
+
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggle{
+    position: relative;
+   
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+}
+
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--black2);
+}
+
+.search label img{
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 1rem;
+    width: 22px;
+    height: 22px;
+
+}
+
+.user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+   cursor: pointer;
+}
+
+.user img{
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:30px;
+}
+
+.cardBox .cardorder {
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.cardBox .cardorder .numbers{
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+
+.cardBox .cardorder .cardName {
+    color: var(--black2);
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.cardBox .cardorder .iconBx {
+    font-size: 3.5rem;
+    color: var(--black2);
+}
+
+.cardBox .cardorder:hover{
+    background: #f7f6ca ;
+    transform: translateY(-20px);
+}
+
+.cardBox .cardorder:hover .numbers,
+.cardBox .cardorder:hover .cardName,
+.cardBox .cardorder:hover .iconBx{
+    color: var(--black);
+}
+
+
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+ 
+    margin-top: 10px;
+
+}
+
+
+
+.addMenu{
+    display: none;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 20px;
+
+}
+
+.addMenu.active{
+    display: grid;
+}
+
+
+
+.card {
+   
+    background-color: transparent;
+    border-radius: 10px;
+    height: 376px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;                          
+    transition: transform 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    scroll-snap-align: start;
+    background: #f7f6ca;
+    text-align: center;
+ 
+  }
+  .card:hover {
+    transform: translateY(-20px);
+  }
+  .card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .card h3 {
+    
+    font-size: 1.5em;
+    margin: 20px 0;
+  }
+  .card p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  .ordern{
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    margin-left: 1px;
+    margin-right: 5px;
+    padding: 10px 50px;
+
+
+    position: relative;
+    bottom: 6%;
+    left: 25%;
+    transform: translate(-50%, 50%);
+  }
+
+  .bottomButtons{
+    position: absolute;
+    bottom: 0;
+  
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+   
+  }
+
+  .buttonss{
+    flex: 1;
+    margin: 10px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deletButton {
+    background: none !important;
+    color: rgb(245, 32, 32) !important;
+    background: transparent !important;
+    font-weight: bold;
+    
+}
+.deletButton:hover{
+  opacity: 0.7;
+}
+.iconDelet{
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+.motifeButton {
+  background: rgb(14, 153, 234);
+  font-weight: bold;
+  color: #fff;
+    
+}
+
+.motifeButton:hover{
+  background: rgba(29, 163, 241, 0.975);
+  color: #e1e0e0;
+
+}
+
+.iconModify{
+  margin-right: 6px;
+  font-weight: bold;
+
+}
+
+.iconModify:hover{
+  opacity: 0.8;
+}
+
+
+
+
+  .cardadd {
+   
+    background-color: transparent;
+    border-radius: 10px;
+    height: 376px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;                          
+    transition: transform 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    scroll-snap-align: start;
+    background: #f7f6ca;
+    text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ 
+  }
+  .cardadd:hover {
+    transform: translateY(-10px);
+  }
+  .cardadd:hover h2{
+   opacity: 10;
+
+  }
+
+  .cardadd:hover .addicon{
+    background: #ffffff;
+  }
+
+  .addfood{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+    
+    
+  }
+
+  .addfood h2{
+    font-size: 28px;
+    
+  }
+
+  .addicon{
+    position: absolute;
+    margin-top: 39px;
+    margin-right: 5px;
+    height: 45px;
+    width: 45px;
+    background: #a4a2a287;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .addicon:hover{
+    background: #a4a2a258 !important;
+  }
+
+  .addimg{
+    width: 35px;
+    height: 35px;
+
+
+  }
+
+  
+.newfood {
+    position: relative;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.221);
+    width: 100%;
+  
+    height:  100vh;
+    z-index: 20;
+   
+    align-items: center;
+    justify-content: center;
+   
+    left: 0; 
+    bottom: 0;
+    z-index: 500;
+    display: none;
+    
+  }
+
+  .newfood.active{
+    display: flex;
+
+  }
+
+  .formfood{
+    width: 420px;
+  height: 450px;
+ 
+  background:#fff;
+  box-sizing: border-box;
+  border-radius: 5mm;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: poppins;
+
+   position:relative; 
+
+  text-align: center;
+  box-shadow: 5px 5px 9px 6px rgb(0, 0, 0, 0.2);
+  }
+
+  .headfoodform{
+   
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 30px 25px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+  
+    
+  }
+
+  .closefood {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #676565;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 50%;
+  }
+
+  .closefood:hover,
+  .closefood:focus {
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 10;
+    
+  }
+
+  .titlemfood h3{
+    
+    position: absolute;
+    text-align: center; 
+    top: 12px;
+    left: 3%;
+    margin: 4px;
+    
+   
+    font-size: 18px;
+    
+    font-family: "Montserrat", sans-serif;
+    
+  }
+
+  .bfoodform{
+    position: absolute;
+    top: 52px;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    background: #fff;
+    height: 87%;
+    overflow: auto;
+    border-radius: 5mm;
+    
+ 
+  }
+
+
+
+  .inputimg{
+   
+    position: relative;
+    top: 20px;
+    cursor: pointer;
+   border-radius: 50px;
+   
+   height: fit-content;
+  }
+
+
+
+  #drop-area{
+    background:none;
+   
+   position: relative;
+    height: 50px;
+    padding: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 254px;
+    padding-right: 110px;
+    border-radius: 20px;
+   text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+
+  }
+
+  #img-view{
+    position: absolute;
+    width:91%;
+    height: 99%;
+    left: 20px;
+    border-radius: 20px;
+ 
+     text-align: center;
+    
+
+    border: 2px dashed #010101;
+  
+
+
+    background: #c7c5c5d9; 
+
+    background-size:cover;
+    background-clip: border-box;
+    background-position:center; 
+    background-repeat: no-repeat;
+   
+
+
+  }
+
+  .img-view img{
+    width: 50px;
+    height: 50px;
+   margin-top: 30px;
+   margin-right: 2px;
+  
+  }
+
+  .img-view p{
+    color: #000;
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+
+
+
+
+  .boxtitle{
+    margin-top: 30px;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    background: #00000000;
+   
+    
+    
+  }
+
+  .titlelabel {
+    display: flex;
+    justify-content: flex-start;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    color: #000;
+    margin-left: 32px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .inputF {
+    display: flex ;
+    justify-content: center ;
+    width: 376px ;
+    padding: 5px ;
+    height: 40px ;
+    border: 0.3px solid #070707 ;
+    border-radius: 8px;
+    
+    
+}
+
+  
+.iconf{
+  position: absolute;
+  margin-left: 24px;
+ 
+}
+.iconf input{
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+}
+.iconf span {
+  position: absolute;
+  left: 3px; 
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+
+  
+}
+
+.boxpq{
+  margin-top: 110px;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  background: #00000000;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ 
+  
+  
+}
+
+.inflabel {
+  display: flex;
+  justify-content: flex-start;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  margin-left: 32px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.inputT {
+  display: flex ;
+  justify-content: center ;
+  width: 166px ;
+  padding: 1px ;
+  height: 40px ;
+  border: 0.3px solid #070707 ;
+  border-radius: 8px;
+}
+
+.boxpq input[type="number"]::-webkit-inner-spin-button,
+.boxpq input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.typefood{
+  margin-top: 190px;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  background: #00000000;
+ 
+  
+  
+}
+
+.inputype {
+  display: flex ;
+  justify-content: center ;
+  width: 376px ;
+  padding: 5px ;
+  height: 40px ;
+  border: 0.3px solid #070707 ;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  
+  
+}
+
+
+
+::-webkit-scrollbar {
+  width: 5px; 
+  
+  border-radius: 5px;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e86565e1; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f109; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00000096; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+.inputype option {
+  
+  color: #000; 
+  background-color: #fff;
+  padding: 40px 40px; 
+  border-radius: 10px;
+  margin-top: 10px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+select:hover option {
+  background-color: #fff;
+  color: #000;
+}
+
+.ingfood{
+  margin-top: 275px;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  background: #00000000;
+ 
+  
+  
+}
+
+
+.inginput {
+  display: flex ;
+  justify-content: center ;
+  width: 376px ;
+  padding: 5px ;
+  height: 75px ;
+  border: 0.3px solid #070707 ;
+  border-radius: 8px;
+  
+  
+}
+
+  
+.icont{
+  position: absolute;
+  margin-left: 24px;
+ 
+}
+
+.icont textarea{
+  position: absolute;
+  margin-left: 0px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.inglabel {
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  margin-left: 30px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.addfButton{
+  margin-top: 390px;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  background: #00000000;
+ 
+  
+  
+}
+
+
+.addfButton button {
+  width: 75%;
+  height: 40px;
+  
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 50px;
+  font-size: 19px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.addfButton button:hover{
+  background-color: #2f2f2fee;
+}
+
+
+
+
+.ConfirmDelet {
+  position: relative;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.139);
+  width: 100%;
+ 
+  height:  100vh;
+  z-index: 20;
+ 
+ 
+  align-items: center;
+  justify-content: center;
+ 
+  left: 0; 
+  bottom: 0;
+  z-index: 500;
+  display: none;
+  
+}
+
+.ConfirmDelet.active{
+  display: flex;
+
+}
+
+
+.DeletFood{
+  width: 420px;
+height: 200px;
+
+background:#fff;
+box-sizing: border-box;
+border-radius: 5mm;
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+flex-direction: column;
+font-family: poppins;
+
+ position:relative; 
+
+text-align: center;
+box-shadow: 5px 5px 9px 6px rgb(0, 0, 0, 0.2);
+overflow: hidden;
+}
+
+.headDelet{
+   
+  width: 100%;
+  height: 73px;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  
+}
+
+.DeletForever{
+  position: absolute;
+  top: 11px;
+  left: 180px;
+  font-size: 60px !important;
+  color: rgb(237, 26, 26);
+}
+
+
+.ConfirmMessage h3{
+    
+  position: absolute;
+  text-align: center; 
+  top: 0;
+
+  color: #000;
+  font-weight: 700;
+  font-size: 25px;
+ letter-spacing: 1PX;
+
+  
+  font-family: "Montserrat", sans-serif;
+  
+}
+.ConfirmMessage h5{
+    
+  position: absolute;
+  text-align: center; 
+  top: 37px;
+
+  color: #3d3b3bcf;
+  font-weight: 700;
+
+ letter-spacing: 1PX;
+ font-size: 14px;
+
+  
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+
+
+.ConfirmMessage{
+  position: absolute;
+  top: 73px;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  background: #fff;
+  height: 36%;
+  overflow: auto;
+  border-radius: 5mm;
+  display: flex;
+  justify-content: center;
+  
+
+}
+
+.bottomConfirm{
+  position: absolute;
+  bottom: 0;
+  border-radius: 5mm;
+  height: 27%;
+  width: 100%;
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px;
+
+}
+
+.buttonsDelet{
+  flex: 1;
+  margin: 10px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.ConfimationButton{
+  background: rgb(237, 37, 37);
+  color: #fff;
+  
+  font-weight: bold;
+  
+}
+.ConfimationButton:hover{
+  background: rgba(233, 42, 42, 0.925);
+opacity: 0.7;
+}
+
+.cancelButton {
+  border: #3e3d3dd8 solid 1px;
+  background: transparent;
+  font-weight: bold;
+  color: #000;
+    
+}
+
+.cancelButton:hover{
+  background: #c6c5c588;
+  color: #131313;
+
+}
+
+
+.details .recentOrders {
+  position: relative;
+  top: -20px;
+  display: grid;
+  min-height: 530px;
+  background: var(--white);
+  padding: 1px;
+  box-shadow: 20px;
+  border-radius: 20px;
+  width: 100%;
+  
+}
+.ordersCo{
+  position: relative;
+  width: 300px !important;
+  overflow-x: auto;
+}
+.orderf{
+  width: 190px;
+  height: 80px;
+  background: #000;
+}
+.recentOrders.active{
+  display: none;
+}
+
+.table-container {
+  
+  background: #ddd;
+  backdrop-filter: blur(70px);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 99%;
+  position: relative;
+  
+  overflow-y:auto ;
+
+}
+
+.head{
+  position: absolute;
+  top:5;
+  width: 95%;
+  height: 50px;
+ 
+
+}
+
+
+.head h2 {
+  
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: #555;
+}
+
+.orders-table {
+  width: 99%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px;
+  position: absolute;
+  top: 62px;
+
+
+  
+}
+
+
+.headTable{
+  position:sticky;
+  top: 0;
+  width: 98%;
+ 
+}
+
+.bodyTable{
+  position: relative;
+  height: 500px;
+  overflow-y:auto ;
+}
+
+.bodyTable tr{
+  cursor: pointer;
+ 
+
+}
+
+.orders-table thead tr {
+  background-color: #000;
+  color: white;
+}
+
+.orders-table th, .orders-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.orders-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.orders-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.orders-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.orders-table img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+.status.shipped {
+  background-color: #00BFFF;
+}
+
+.status.delivered {
+  background-color: #32CD32;
+}
+
+.status.pending {
+  background-color: #FFA500;
+}
+
+.status.cancelled {
+  background-color: #f23817;
+}
+/*//////////////////////*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  position: relative;
+
+
+  border: 1px solid #888;
+  width: 460px;
+  height: 400px;
+
+  border-radius: 13px;
+}
+
+.headOrder{
+   position: absolute;
+   top: 1px;
+   left: 0;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+ 
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+ 
+}
+
+.closeOrder {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #676565;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.closeOrder:hover,
+.closeOrder:focus {
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 10;
+  
+}
+
+.titleOrder h3{
+    
+  position: absolute;
+  text-align: center; 
+  top: 12px;
+  left: 3%;
+  margin: 4px;
+  
+ 
+  font-size: 18px;
+  
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+.order-body{
+  position: absolute;
+  top: 51px;
+ 
+  height: 346px;
+  border-radius: 5px;
+  width: 100%;
+  overflow: auto;
+}
+
+.NameCustomer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 10px;
+  width: 100%;
+  height: 50px;
+ 
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.FullName{
+  font-size: large;
+  font-weight: 700;
+  margin-left: 9px;
+  font-family: "Montserrat", sans-serif;
+  color: #000000a0;
+
+}
+.NameInfo{
+  font-size: medium;
+  font-weight: 600;
+  color: #000;
+}
+
+
+.AddressCustomer,.EmailCustomer,.PhoneCustomer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 14px;
+  width: 100%;
+  height: 50px;
+ 
+  font-family: "Montserrat", sans-serif;
+ 
+
+}
+
+.Address,.Date,.Email,.Phone,.Price,.Comment,.foodDetail{
+  font-size: large;
+  font-weight: 700;
+  margin-left: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #000000a0;
+
+}
+
+.price{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+}
+
+.AddressInfo,.DateInfo,.EmailInfo,.PhoneInfo,.PriceInfo,.CommentInfo{
+  font-size: medium;
+  font-weight: 600;
+  color: #000;
+}
+
+.OrderDate,.PriceOrder{
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 14px;
+  width: 100%;
+  height: 50px;
+  
+  font-family: "Montserrat", sans-serif;
+}
+
+.CommentCustomer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 14px;
+  width: 100%;
+  height: 80px;
+ 
+  overflow-y: auto;
+ 
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.foodOrder{
+  position: relative;
+  display: flex;
+ 
+  top: 16px;
+  width: 100%;
+  height: 200px;
+ 
+  overflow-y: auto;
+ 
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.FoodInfo{
+  position: absolute;
+  width: 100%;
+  top: 25px;
+  height: 180px;
+  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+}
+
+.FoodCart{
+  flex: 0 0 45%;
+  position: relative;
+  display: grid;
+ 
+  height: 70px;
+  margin-top: 10px;
+  margin-left: 17px;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap:2px;
+  column-gap: 10px !important;
+ border-radius: 6px;
+  background: #0000001e;
+}
+
+.cart-img{
+  position: absolute;
+  top: 5px;
+  border-radius: 5px;
+  width: 70px;
+  height: 86%;
+
+ 
+}
+
+
+
+.detail-box{
+  position: absolute;
+  left: 64px;
+  top: 9px;
+  width: 60%;
+  height: 95%;
+  display: grid;
+
+  margin-left: 10px;
+}
+
+.product-title{
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.product-quantity{
+  font-size: 14px;
+  font-weight: 700;
+
+}
+
+
+/*/////////////////////////Reservation ///////////////////////////////////////*/
+.details .reservationTable {
+  position: relative;
+  top: -20px;
+  display: none;
+  min-height: 530px;
+  background: var(--white);
+  padding: 1px;
+  box-shadow: 20px;
+  border-radius: 20px;
+  width: 100%;
+  
+}
+
+.reservationTable.active{
+  display: grid;
+}
+
+
+.reservationDetails{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.reservationDetails.active{
+  display: flex;
+
+}
+
+
+.modalreservation {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 60px;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.reservedetails {
+  background-color: #fefefe;
+  position: relative;
+
+
+  border: 1px solid #888;
+  width: 460px;
+  height: 380px;
+  
+  border-radius: 13px;
+}
+
+.headreserve{
+   position: absolute;
+   top: 1px;
+   left: 0;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+.closereserve {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #676565;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.closereserve:hover,
+.closereserve:focus {
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 10;
+  
+}
+
+.titlereserveD h3{
+    
+  position: absolute;
+  text-align: center; 
+  top: 12px;
+  left: 3%;
+  margin: 4px;
+  
+ 
+  font-size: 18px;
+  
+  font-family: "Montserrat", sans-serif;
+  
+}
+
+.reserve-body{
+  position: absolute;
+  top: 51px;
+
+  height: 326px;
+  border-radius: 5px;
+  width: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.reserveNameCustomer,.reserveDate,.reserveTime,.reserveGuests{
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 10px;
+  width: 100%;
+  height: 50px;
+  
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.reserveFullName,.reservedate,.reservetime,.reserveguests{
+  font-size: large;
+  font-weight: 700;
+  margin-left: 9px;
+  font-family: "Montserrat", sans-serif;
+  color: #000000a0;
+
+}
+.reserveNameInfo,.reservedateInfo,.reservetimeInfo,.reservecodeInfo,.reserveguestsInfo{
+  font-size: medium;
+  font-weight: 600;
+  color: #000;
+}
+
+
+.reserveEmailCustomer,.reservePhoneCustomer{
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 10px;
+  width: 100%;
+  height: 50px;
+
+  font-family: "Montserrat", sans-serif;
+ 
+
+}
+
+.Date,.reserveEmail,.reservePhone,.reserveComment{
+  font-size: large;
+  font-weight: 700;
+  margin-left: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #000000a0;
+
+}
+
+
+
+.reserveDateInfo,.reserveEmailInfo,.reservePhoneInfo,.reserveCommentInfo{
+  font-size: medium;
+  font-weight: 600;
+  color: #000;
+}
+
+.reserveDate{
+  position: relative;
+  display: flex;
+  align-items: center;
+  top: 10px;
+  width: 100%;
+  height: 50px;
+ 
+  font-family: "Montserrat", sans-serif;
+}
+
+.reserveCommentCustomer{
+  position: relative;
+  display: flex;
+
+  top: 10px;
+  width: 100%;
+  height: 80px;
+
+  font-family: "Montserrat", sans-serif;
+
+}

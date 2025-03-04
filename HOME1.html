@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="Logo Food2.png" type="x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="shortcut icon" type="x-icon" href="img/Logo Food2.png" >
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylepopup.css">
+    <link rel="stylesheet" href="styleReserve.css">
+    <link rel="stylesheet" href="styleOrder.css">
+    <title>food</title>
+
+    <script>
+       var count = 0; 
+        function calculeNumbers(output) {
+            count++; 
+            var output = ' ' + count;
+          
+            document.getElementById("numbers").innerHTML = output;
+          
+          
+        }
+          
+    
+
+           
+          </script>
+
+</head>
+<body>
+    <header class="header headerH" data-header>
+        <nav class="navbar">
+        <img class="logo" src="img/Logo4.png">
+          
+                <ul class="nav__links">
+                    <li class="nav-item liH">
+                        <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                    </li>
+
+                    <li class="nav-item liH">
+                        <a href="menu.html" class="navbar-link" data-nav-link>Menu</a>
+                    </li>
+
+                    <li class="nav-item liH">
+                        <a href="#about.html" class="navbar-link" data-nav-link>About</a>
+                    </li>
+                </ul>
+          
+
+
+            <a href="LOGIN.html"><button class="login buttonH">Log in</button></a>
+            <a href="LOGIN.html"><button class="sign buttonH">sign up</button></a>
+
+         <!--////////////////////CART//////////////////////////////////////////////-->
+         <div class="cart">
+             <h2 class="cart-title">Your cart</h2>
+             
+             <div class="cart-content">
+                
+             </div>
+            
+             <div class="total">
+                 <div class="total-title">Total</div>
+                 <div class="total-price">0 DA</div>
+             </div>
+            
+             <a ><button  type="button" class="btn-buy buttonH">Buy Now</button></a>
+          
+             <span class="material-symbols-outlined spanH close-cartH" id="close-cart">
+                 close
+                 </span>
+ 
+         </div>
+
+
+
+
+       
+        <div class="menu">
+            <ul>
+                    <li class="liH"><img src="img/profile.png"><a href="profile.html">view profile</a> </li>
+
+                    <li class="liH"> <img src="img/fav.png"><a href="#">Favorites</a> </li>
+                    <li class="liout liH"> <img src="img/logout.png"><a href="#">Log out</a> </li>
+               
+            </ul>
+        </div>
+         
+        </nav>
+
+         
+
+        
+        </div>
+
+
+
+
+
+    </header>
+
+    <!--////////////////////////////////////////////////ORDER FORM:::::::::::::::::::::::::::::///////////////////////////////////////////////////////-->
+    <div class="FormOrder">
+      <form action="" class="popup-content2">
+          <div class="closeOrder">
+              <span class="material-symbols-outlined" id="close-cart">
+                  close
+                  </span>
+          </div>
+       <div class="headForm">
+          <div class="titleForm ">
+              <h3>The Green Corner</h3>
+          </div>
+          
+            
+    
+       </div>
+       
+       <div class="select-menuForm">
+    
+        <div class="contactForm">
+          <div class="contct">
+              <span id="left" class="material-symbols-outlined y">
+                  arrow_back_ios
+                  </span>
+              <h4>Contact</h4>
+          </div>
+        
+          <div class="box1">
+    
+              
+    
+              <div class="boxInput">
+                  <label>first name</label>
+                <div class="icon">
+                  <span class="material-symbols-outlined">
+                      person
+                      </span>
+                  <input class="name inputF" type="text" id="fname" name="fname"  required>
+              </div>
+              </div>
+    
+              <div class="boxInput">
+                  <label>last name</label>
+                <div class="icon">
+                  <span class="material-symbols-outlined">
+                      person
+                      </span>
+                  <input class="nom inputF" type="text" id="lname" name="lname"  required>
+              </div>
+              </div>
+    
+               <div class="boxInput">  <label>Phone</label>
+                <div class="icon">
+                  <span class="material-symbols-outlined">
+                      call
+                      </span>
+                  <input class="inputF" type="tel" id="name" name="name" placeholder="+213 6 56 92 38 27" required>
+              </div>
+              </div>
+    
+              <div class="boxInput">
+                  <label>Email</label>
+               <div class="icon">
+                  <span class="material-symbols-outlined">
+                      mail
+                      </span>
+                   <input class="inputF" type="email" id="email" name="email" required >
+              </div>
+              </div>
+              
+    
+            </div>
+            <div class="box2">
+              
+              <div class="boxInput">
+                  <label>COMMENTS,ALLERGIES AND EATING HABITS (optional)</label>
+                <div class="icon">
+                 
+                  <input class="comment inputF" type="text"  >
+              </div>
+              </div>
+    
+              <div class="boxInput">
+                  <label>YOUR GIFT CODE (optional)</label>
+                <div class="icon">
+                  <span class="material-symbols-outlined">
+                      redeem
+                      </span>
+                  <input class="gift inputF" type="text"  >
+              </div>
+              </div>
+         
+             
+              <div class="chek">
+              <div class="checkbox-group">
+                  <input class="inputF" type="checkbox" id="checkbox1" name="checkbox1">
+                  <label for="checkbox1">Save this information to facilitate my future order.</label>
+                </div>
+                <div class="checkbox-group">
+                  <input class="inputF" type="checkbox" id="checkbox2" name="checkbox2">
+                  <label for="checkbox2">Sign me up to receive dining offers and news from this restaurant by email.</label>
+                </div>
+                <div class="checkbox-group">
+                  <input class="inputF" type="checkbox" id="checkbox3" name="checkbox3">
+                  <label for="checkbox3">Yes, I want to get text updates and reminders about my order.</label>
+                </div>
+              </div>
+    
+            
+    
+            </div>
+    
+            <div class="reserveButton">
+              <button class="buttonForm" type="submit">Order</button>
+            </div>
+           
+        </div>
+    
+        <div class="reservation">
+    
+          <div class="reserveinfo">
+            <div class="reserveHead">
+              <h3>Your reservation.</h3>
+              <h4><a class="modifyOrder">Modify</a></h4>
+            </div>
+            
+            <div class="reserveContent">
+    
+              <div class="cart-content2">
+                
+              </div>
+              
+           
+       
+            
+            
+            </div>
+          </div>
+    
+          </div>
+       
+        </div>
+    
+     
+       </div>
+    
+      </form>
+    </div>
+    <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+    <!--//////////////////////////bottom navbar///////////////////////////////-->
+    <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+        <li class="nav__item liH">
+            <a href="#home" class="nav__link active-link">
+             <img class="nav__icon" src="img/home.png">
+                <span class="nav__name spanH">Home</span>
+            </a>
+        </li>
+
+        <li class="nav__item liH">
+            <a href="menu.html" class="nav__link">
+                <span class="material-symbols-outlined spanH">
+                    restaurant
+                    </span>
+                <span class="nav__name spanH">Menu</span>
+            </a>
+        </li>
+        <li class="nav__item liH">
+            <a href="#" class="nav__link">
+                <span class="material-symbols-outlined nav__icon spanH">
+                    person
+                    </span>
+                <span class="nav__name spanH">About</span>
+            </a>
+        </li>
+     
+    </ul>
+    </div>
+<!--/////////////////////////////////////Reservation///////////////////////////////////////////////////////////////-->
+<div class="center">
+    <div class="popup">
+        <form action="" class="popup-content">
+            <div class="head">
+                <div class="close">
+                    <span class="material-symbols-outlined" id="close-cart">
+                        close
+                        </span>
+                </div>
+             
+                <div class="titlePopup">
+                    <h3 class="titleres">The Green Corner</h3>
+                </div>
+                
+                  <div class="subtitle">
+                  <p> Dear customers, the entire team at The Green Corner  is pleased to welcome you. We kindly ask you to respect the schedule of your reservation.
+        
+                  </p>
+                </div>
+        
+             </div>
+         
+         <div class="select-menu">
+    
+         
+    
+            <div class="select-btn">
+                <span class="material-symbols-outlined colon">
+                    local_dining
+                    </span>
+              <span class="sBtn-text">
+                
+              </span>&nbspguests
+              <span class="spacer"></span>
+              <span class="material-symbols-outlined">
+                expand_more
+                </span>
+            </div>
+          
+            
+            <ul class="converts">
+               <li class="convert">1</li>
+               <li class="convert">2</li>
+               <li class="convert">3</li>
+               <li class="convert">4</li>
+               <li class="convert">5</li>
+               <li class="convert">6</li>
+               <li class="convert">7</li>
+               <li class="convert">8</li>
+               <li class="convert">9</li>
+               <li class="convert">+</li>
+           </ul>
+           <div class="select-btnn">
+            <span class="material-symbols-outlined colon">
+              calendar_month
+              </span>
+          <span class="select-selected">
+            
+          </span>
+          <span class="spacer"></span>
+          <span class="material-symbols-outlined">
+            expand_more
+            </span>
+        </div>
+    
+         <div class="custom-select">
+
+            <div class="calendar" id="calendar">
+              <header>
+                <h3></h3>
+                <nav>
+                  <button id="prev"></button>
+                  <button id="next"></button>
+                </nav>
+              </header>
+              <section>
+                <ul class="days">
+                  <li>Sun</li>
+                  <li>Mon</li>
+                  <li>Tue</li>
+                  <li>Wed</li>
+                  <li>Thu</li>
+                  <li>Fri</li>
+                  <li>Sat</li>
+                </ul>
+                <ul class="dates"></ul>
+              </section>
+            </div>
+          </div>
+    
+          <div class="select-btnn2">
+            <span class="material-symbols-outlined colon">
+              schedule
+              </span>
+          <span class="hour">
+            Horaire
+          </span>
+          <span class="spacer"></span>
+          <span class="material-symbols-outlined">
+            expand_more
+            </span>
+        </div>
+    
+        <ul class="times">
+        
+          <li class="breakfast">Breakfast</li>
+            <li class="time breakfas"><div class="green-circle"></div>08:00</li>
+            <li class="time breakfas"><div class="green-circle"></div>08:30</li>
+            <li class="time breakfas"><div class="green-circle"></div>09:00</li>
+            <li class="time breakfas"><div class="green-circle"></div>09:30</li>
+            <li class="time breakfas"><div class="green-circle"></div>10:00</li>
+            <li class="time breakfas"><div class="green-circle"></div>10:30</li>
+            <li class="time breakfas"><div class="green-circle"></div>11:00</li>
+    
+          
+            <li class="lunch">Lunch</li>
+            <li class="time lunc"><div class="green-circle"></div>11:30</li>
+            <li class="time lunc"><div class="green-circle"></div>12:00</li>
+            <li class="time lunc"><div class="green-circle"></div>12:30</li>
+            <li class="time lunc"><div class="green-circle"></div>13:00</li>
+    
+          
+            <li class="dinner">Dinner</li>
+            <li class="time dinne"><div class="green-circle"></div>18:00</li>
+            <li class="time dinne"><div class="green-circle"></div>18:30</li>
+            <li class="time dinne"><div class="green-circle"></div>19:00</li>
+            <li class="time dinne"><div class="green-circle"></div>19:30</li>
+            <li class="time dinne"><div class="green-circle"></div>20:00</li>
+            <li class="time dinne"><div class="green-circle"></div>20:30</li>
+            <li class="time dinne"><div class="green-circle"></div>21:00</li>
+            <li class="time dinne"><div class="green-circle"></div>21:30</li>
+            <li class="time dinne"><div class="green-circle"></div>22:00</li>
+            <li class="time dinne"><div class="green-circle"></div>22:30</li>
+            <li class="time dinne"><div class="green-circle"></div>23:00</li>
+            <li class="time dinne"><div class="green-circle"></div>23:30</li>
+            <li class="time dinne"><div class="green-circle"></div>00:00</li>
+            <li class="time dinne"><div class="green-circle"></div>00:30</li>
+            <li class="time dinne"><div class="green-circle"></div>01:00</li>
+           
+    
+        </ul>
+    
+    
+       
+    
+    
+         </div>
+        
+         <div class="btns">
+            <button class="btnReserve" type="button">reserve table</button>
+         </div>
+        
+          
+    
+        </form>
+    </div>
+    </div>
+    <!--//////////////////////////////.........formreservation.......///////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div class="popupForm">
+        <form action="" class="popup-content3">
+            <div class="closeForm">
+                <span class="material-symbols-outlined" id="close-cart">
+                    close
+                    </span>
+            </div>
+         <div class="headForm">
+            <div class="titleForm ">
+                <h3>The Green Corner</h3>
+            </div>
+            
+              
+      
+         </div>
+         
+         <div class="select-menuForm">
+      
+          <div class="contactForm">
+            <div class="contct">
+                <span id="left" class="material-symbols-outlined y">
+                    arrow_back_ios
+                    </span>
+                <h4>Contact</h4>
+            </div>
+         
+            <div class="box1">
+      
+                
+      
+                <div class="boxInput">
+                    <label>first name</label>
+                  <div class="icon">
+                    <span class="material-symbols-outlined">
+                        person
+                        </span>
+                    <input class="name inputF" type="text" id="fname" name="fname"  required>
+                </div>
+                </div>
+      
+                <div class="boxInput">
+                    <label>last name</label>
+                  <div class="icon">
+                    <span class="material-symbols-outlined">
+                        person
+                        </span>
+                    <input class="nom inputF" type="text" id="lname" name="lname"  required>
+                </div>
+                </div>
+      
+                 <div class="boxInput">  <label>Phone</label>
+                  <div class="icon">
+                    <span class="material-symbols-outlined">
+                        call
+                        </span>
+                    <input class="inputF" type="tel" id="name" name="name" placeholder="+213 6 56 92 38 27" required>
+                </div>
+                </div>
+      
+                <div class="boxInput">
+                    <label>Email</label>
+                 <div class="icon">
+                    <span class="material-symbols-outlined">
+                        mail
+                        </span>
+                     <input class="inputF" type="email" id="email" name="email" required >
+                </div>
+                </div>
+                
+      
+              </div>
+              <div class="box2">
+                
+                <div class="boxInput">
+                    <label>COMMENTS,ALLERGIES AND EATING HABITS (optional)</label>
+                  <div class="icon">
+                   
+                    <input class="comment inputF" type="text"  >
+                </div>
+                </div>
+      
+                <div class="boxInput">
+                    <label>YOUR GIFT CODE (optional)</label>
+                  <div class="icon">
+                    <span class="material-symbols-outlined">
+                        redeem
+                        </span>
+                    <input class="gift inputF" type="text"  >
+                </div>
+                </div>
+           
+               
+                <div class="chek">
+                <div class="checkbox-group">
+                    <input class="inputF" type="checkbox" id="checkbox1" name="checkbox1">
+                    <label for="checkbox1">Save this information to facilitate my future reservations.</label>
+                  </div>
+                  <div class="checkbox-group">
+                    <input class="inputF" type="checkbox" id="checkbox2" name="checkbox2">
+                    <label for="checkbox2">Sign me up to receive dining offers and news from this restaurant by email.</label>
+                  </div>
+                  <div class="checkbox-group">
+                    <input class="inputF" type="checkbox" id="checkbox3" name="checkbox3">
+                    <label for="checkbox3">Yes, I want to get text updates and reminders about my reservations.</label>
+                  </div>
+                </div>
+      
+              
+      
+              </div>
+      
+              <div class="reserveButton">
+                <button class="buttonForm" type="submit">Reserve</button>
+              </div>
+             
+          </div>
+      
+          <div class="reservation">
+      
+            <div class="reserveinfo">
+              <div class="reserveHead">
+                <h3>Your reservation.</h3>
+                <h4><a class="modifyReserve">Modify</a></h4>
+              </div>
+              
+              <div class="reserveContent">
+      
+                <div class="guest">
+                  <span class="material-symbols-outlined colon">
+                      local_dining
+                      </span>
+                <span class="sBtn-textForm">
+                  2
+                </span>
+               
+              </div>
+      
+                <div class="calendarForm">
+                  <span class="material-symbols-outlined colon">
+                    calendar_month
+                    </span>
+                <span class="select-selectedForm">
+                 
+                </span>
+              
+              </div>
+               
+          <div class="hore">
+            <span class="material-symbols-outlined colon">
+              schedule
+              </span>
+          <span class="hour-form">
+           12:30
+          </span>
+         
+        </div>
+              
+              
+              </div>
+            </div>
+      
+            </div>
+         
+          </div>
+      
+       
+         </div>
+      
+        </form>
+      </div>
+ 
+<!--/////////////////////////////////////.......RESERVATION..////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+    <!--//////////////////////////////HOME///////////////////////////-->
+ 
+    <section class="home sectionH" id="home">
+
+
+        <div class="home-text">
+            <span class="we spanH">Welcome To</span>
+            <h1>&nbsp&nbspFo<span class="textlOGO spanH">od</span></h1>
+            <h2>We're here to bake you <br>happy!</h2>
+            <a href="menu.html" class="btn"><button class="buttonH">Order Now</button> </a>
+        </div>
+
+
+        <div class="home-img">
+            <img class="imgr" src="img/table.png" alt="loading">
+            <a href="#" class="btn"><button class="table buttonH">Book Table</button> </a>
+        </div>
+    </section>
+
+
+        <!--////////////////////////////////////////////////////////////////////////////////////////////-->
+        
+        <section class="blogs sectionH" id="blogs">
+            <div class="heading">
+               
+                <h3>our latest posts</h3>
+            </div>
+            <span id="left" class="material-symbols-outlined y spanH">
+                arrow_back_ios
+                </span>
+            <div class="w">
+               
+                <div class="card  shop-content">
+                    <img src="img/Shrimp Scampi2.jpg" alt="Photo 1" class="product-img" draggable="false">
+                    <h3 class="product-title">Shrimp Scampi</h3>
+                    <p class="price" id="prix">1000 DA</p>
+                    <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+                </div>
+                <div class="card  shop-content">
+                    <img src="img/Cake au Chocolat.jpg" alt="Photo 1" class="product-img" draggable="false">
+                    <h3 class="product-title">Chocolate cake</h3>
+                    <p class="price" id="prix">2500 DA</p>
+                    <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+                </div>
+                <div class="card  shop-content">
+                    <img src="img/Chicken Curry.jpg" alt="Photo 1" class="product-img" draggable="false">
+                    <h3 class="product-title">Chicken Curry</h3>
+                    <p class="price" id="prix">1500 DA</p>
+                    <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+                </div>
+                <div class="card  shop-content">
+                    <img src="img/Lamb Curry.jpg" alt="Photo 1" class="product-img" draggable="false">
+                    <h3 class="product-title">Lamb Curry</h3>
+                    <p class="price" id="prix">1000 DA</p>
+                    <button class="ordern add-cart buttonH" id="cart-icon"  onclick="calculeNumbers()">Order Now</button>
+                </div>
+                <div class="card  shop-content">
+                    <img src="img/Beef Stew.jpg" alt="Photo 1" class="product-img" draggable="false">
+                    <h3 class="product-title">Beef Stew</h3>
+                    <p class="price" id="prix">2000 DA</p>
+                    <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+                </div>
+                <div class="card  shop-content">
+                    <img src="img/Chicken Curry.jpg" alt="Photo 1" class="product-img" draggable="false">
+                    <h3 class="product-title">Chicken Curry</h3>
+                    <p class="price" id="prix">1500 DA</p>
+                    <button class="ordern add-cart buttonH" id="cart-icon" onclick="calculeNumbers()">Order Now</button>
+                </div>
+               
+               
+            </div>
+             <span id="right" class="material-symbols-outlined y spanH">
+            arrow_forward_ios
+             </span>
+       
+        </section>
+        <!---///////////////////////////////////CONTACT////////////////////////////////////////////////////////////////-->
+            <section class="homeC sectionH" id="contact">
+             
+                
+                <div class="contactus">
+                    
+                    <h2 class="title">Our information</h2>
+                     <h3 class="pr">Fill up the form and our team will get back to <br>you within 24 hours.</h3>
+                    
+                    <ul class="info">
+                        <li class="liH">
+                            <i><img src="img/telephone.png" alt="facebook" class="imgff"></i>
+                            <span class="spanH">Phone:&nbsp&nbsp&nbsp </span><a href="tel:+213656923827">+213656923827</a>
+                        </li>
+                        <li class="liH">
+                            <i><img src="img/mail.png" alt="facebook" class="imgff"></i>
+                            <span class="spanH">Email:&nbsp&nbsp&nbsp&nbsp</span><a href="mailto:info@food.com">info@food.com</a>
+                        </li>
+                    </ul>
+
+                    <ul class="social">
+                        <li class="liH">
+                            <a href="https://www.facebook.com/Raouf.Bh" target="_blank">
+                                <img src="img/facebook.png" alt="facebook" class="imgff">
+                            </a>
+                        </li>
+                        <li class="liH">
+                            <a href="#">
+                                <img src="img/twitter.png" alt="twitter" class="imgff">
+                            </a>
+                        </li>
+                        <li class="liH">
+                             <a href="#">
+                                <img src="img/instagram.png" alt="instagram" class="imgff">
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+        <div class="contact" id="contact">
+            <form class="contact-form" id="contact-form">
+                <div>
+                  <label class="labelH" for="name">Name:</label>
+                  <input class="inputHO" type="text" id="name" name="name" required>
+                </div>
+                <div>
+                  <label class="labelH" for="email">Email:</label>
+                  <input class="inputHO" type="email" id="email" name="email" required>
+                </div>
+                <div>
+                  <label class="labelH" for="message">Message:</label>
+                  <textarea id="message" name="message" required></textarea>
+                </div>
+                <button class="buttonH" type="submit">Send</button>
+            </form>
+        </div>
+
+
+    </section>
+
+       
+ <!--</div>-->
+        
+ </section>
+
+ <!--///////////////////////////////////////FOOTER////////////////////////////////////////////////////////-->
+    <footer>
+        <ul class="iconSocial">
+            <li class="liH"><a href="https://www.facebook.com/Raouf.Bh" target="_blank"><img src="img/facebook.png" alt="facebook" class="imgf" ></a></li>
+            <li class="liH"><a href="#"><img src="img/twitter.png" alt="twitter" class="imgf" ></a></li>
+            <li class="liH"><a href="#"><img src="img/linkedin.png" alt="linkedin" class="imgf" ></a></li>
+            <li class="liH"><a href="#"><img src="img/instagram.png" alt="instagram" class="imgf" ></a></li>
+        </ul>
+
+        <ul class="mene">
+            <li class="liH"><a href="home.html">Home</a></li>
+            <li class="liH"><a href="menu.html">Menu</a></li>
+            <li class="liH"><a href="about.html">About</a></li>
+            <li class="liH"><a href="#">team</a></li>
+            <li class="liH"><a href="#contact">Contact</a></li>
+        </ul>
+        <P>©2024 Bouhadja Raouf | All Rights Reserved.</P>
+    </footer>
+   
+
+    
+   
+
+    <script src="./javascript/js.js" defer></script>
+    <script src="./javascript/maindra.js" defer></script>
+    <script src="./javascript/menutogle.js" defer></script>
+    <script src="./javascript/cart.js" defer></script>
+    <script src="./javascript/down.js" defer></script>
+    <script src="./javascript/script1.js" defer></script>
+    <script src="./javascript/script.js" defer></script>
+
+</body>
+</html>

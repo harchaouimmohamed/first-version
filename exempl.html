@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="img/Logo Food2.png">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashbord.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+
+                        </span>
+                        <span class="title">Food</span>
+                    </a>
+                </li>
+
+                <li class="order">
+                    <a href="#">
+                        <span class="icon">
+                            <!-- <img class="iconave" src="img/profile.png"> -->
+                            <span class="material-symbols-outlined">
+                                restaurant_menu
+                            </span>
+                        </span>
+                        <span class="title order">Customer's Orders</span>
+                    </a>
+                </li>
+                <li class="food">
+                    <a href="#">
+                        <span class="icon">
+                            <!-- <img class="iconave" src="img/add.png" alt=""> -->
+                            <span class="material-symbols-outlined">
+                                add
+                            </span>
+                        </span>
+
+                        <span class="title">Add food</span>
+                    </a>
+                </li>
+                <li class="reservation hovered">
+                    <a href="#">
+                        <span class="icon">
+                            <!-- <img class="iconave" src="img/profile.png"> -->
+                            <span class="material-symbols-outlined">
+                                table_restaurant
+                            </span>
+                        </span>
+                        <span class="title">reservation</span>
+                    </a>
+                </li>
+                <li class="SignOut">
+                    <form action="">
+                        <a href="dashbord_server.html?Logout=admin">
+                            <span class="icon">
+                                <img class="iconave" src="img/logout.png">
+                            </span>
+                            <span class="title">Sign Out</span>
+                        </a>
+                    </form>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <img src="img/menu.png">
+                </div>
+
+                <div class="search">
+                    <label>
+                        <form action="" method="post">
+                            <input type="text" name="" placeholder="search here">
+                            <a href=""><img src='img/search.png'></a>
+                        </form>
+                    </label>
+                </div>
+
+                <div class="user">
+
+                </div>
+            </div>
+
+
+            <div class="cardBox">
+                <div class="cardorder">
+                    <div>
+                        <div class="numbers">1504</div>
+                        <div class="cardName">customers</div>
+                    </div>
+
+                    <div class="iconBox">
+
+                    </div>
+                </div>
+                <div class="cardorder">
+                    <div>
+                        <div class="numbers">98600 DA</div>
+                        <div class="cardName">Sales</div>
+                    </div>
+
+                    <div class="iconBox">
+
+                    </div>
+                </div>
+                <div class="cardorder">
+                    <div>
+                        <div class="numbers">384</div>
+                        <div class="cardName">Total Orders</div>
+                    </div>
+
+                    <div class="iconBox">
+
+                    </div>
+                </div>
+                <div class="cardorder">
+                    <div>
+                        <div class="numbers">284</div>
+                        <div class="cardName">Reservations</div>
+                    </div>
+
+                    <div class="iconBox">
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="details">
+                <div class="recentOrders">
+
+
+
+                    <div class="table-container">
+                        <div class="head">
+                            <h2>Customer's Orders</h2>
+
+
+                        </div>
+                        <table class="orders-table">
+                            <thead class="headTable">
+                                <tr>
+
+                                    <th>Customer</th>
+                                    <th>Location</th>
+                                    <th>Order Date</th>
+                                    <th>Status</th>
+                                    <th>Price</th>
+
+                                </tr>
+                            </thead>
+                            <tbody class="bodyTable">
+                                <tr>
+                                </tr>
+
+
+                                <tr class="ordercostumer" onclick="InfoFood(this);">
+                                    <td> <span class="getname"></span>
+                                        <span class="getaddres"></span>
+                                        <span class="getemail"></span>
+                                        <span class="getphone"></span>
+                                        <span class="getprice"></span>
+                                        <span class="gettime"></span>
+                                        <span class="getdiscription"></span>
+                                        <span class="namefood"></span>
+                                        <span class="quintity"></span>
+                                        <span class="getimag"></span>
+
+
+                                        <img src="img/reserver.png">
+                                    </td>
+                                    <td>order_addres</td>
+                                    <td>order_time</td>
+                                    <td><span class="status shipped">order_status</span></td>
+                                    <td>total_price</td>
+
+                                </tr>
+                                <tr class="ordercostumer">
+
+                                    <td><img src="img/photo profile.jpg"> raouf bh</td>
+                                    <td>skikda</td>
+                                    <td>14 Mar, 2024</td>
+                                    <td><span class="status shipped">pending</span></td>
+                                    <td>600DA</td>
+
+                                </tr>
+
+
+
+
+
+
+                                </tr>
+                                <tr class="ordercostumer" onclick="moveContent()">
+
+                                    <td><img src="img/photo profile.jpg"> raouf</td>
+                                    <td>Annaba</td>
+                                    <td>27 JUIN, 2024</td>
+                                    <td><span class="status cancelled"> cancelled</span></td>
+                                    <td>1000 DA </td>
+
+                                </tr>
+                                <tr class="ordercostumer">
+
+                                    <td><img src="img/photo profile.jpg"> <span id="sourceSpan">Hello, world!</span>raouf</td>
+                                    <td>skikda</td>
+                                    <td>25 May, 2024</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                    <td>5000 DA</td>
+
+                                </tr>
+                                <tr class="ordercostumer">
+
+                                    <td><img src="img/photo profile.jpg"> raouf</td>
+                                    <td>skikda</td>
+                                    <td>25 May, 2024</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                    <td>7000 DA</td>
+
+                                </tr>
+                                <tr class="ordercostumer">
+
+                                    <td><img src="img/photo profile.jpg">raouf</td>
+                                    <td>Constandine</td>
+                                    <td>25 May, 2024</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                    <td>1000 DA</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td><img src="img/photo profile.jpg"> raouf</td>
+                                    <td>annaba</td>
+                                    <td>25 May, 2024</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                    <td>2500 DA</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td><img src="img/photo profile.jpg">raouf</td>
+                                    <td>skikda</td>
+                                    <td>25 May, 2024</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                    <td>3000 DA</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td><img src="img/photo profile.jpg"> raouf bh</td>
+                                    <td>skikda</td>
+                                    <td>25 May, 2024</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                    <td>1500 DA</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td><img src="img/photo profile.jpg"> Raouf bh</td>
+                                    <td>skikda</td>
+                                    <td>25 May, 2024</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                    <td>8000 DA</td>
+
+                                </tr>
+                                <tr>
+
+                                    <td><img src="img/photo profile.jpg"> Raouf bh</td>
+                                    <td>skikda</td>
+                                    <td>25 May, 2024</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                    <td>6500 DA</td>
+
+                                </tr> -->
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="orderModal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <div class="headOrder">
+                                <div class="closeOrder">
+                                    <span class="material-symbols-outlined" id="close-cart">
+                                        close
+                                    </span>
+                                </div>
+
+                                <div class="titleOrder">
+                                    <h3 class="titleres">Order Details</h3>
+                                </div>
+
+                            </div>
+                            <div class="order-body">
+                                <div class="NameCustomer">
+                                    <p class="FullName">Full Name :<span id="displayFullName"></p>
+
+                                </div>
+                                <div class="AddressCustomer">
+                                    <p class="Address">Address :<span id="displayAddress"></span></p>
+
+                                </div>
+                                <div class="EmailCustomer">
+                                    <p class="Email">Email : <span id="displayEmail"></span></p>
+
+                                </div>
+                                <div class="PhoneCustomer">
+                                    <p class="Phone">Phone : <span id="displayPhone"></span></p>
+
+                                </div>
+                                <div class="PhoneCustomer">
+                                    <p class="Phone">Gift Code : <span class="AddressInfo" id="Code"> 12763 </span></p>
+
+                                </div>
+                                <div class="PriceOrder">
+                                    <p class="Price">price of order:<span id="displayPrice"></span></p>
+
+                                </div>
+                                <div class="OrderDate">
+                                    <p class="Date">Order Date: <span id="displayDate"></span></p>
+
+                                </div>
+                                <div class="CommentCustomer">
+                                    <p class="Comment">Comments, Allergies :<span id="displayComment"> </span></p>
+
+                                </div>
+                                <div class="foodOrder">
+                                    <p class="foodDetail">
+                                        Food: </p>
+                                    <div class="FoodInfo">
+                                        <div class="FoodCart" id="Food">
+                                            <img src="" id="getimage" alt="no found" class="cart-img">
+                                            <div class="detail-box">
+                                                <div class="product-title" id="getnamefood">
+                                                    Beef Stew
+
+                                                </div>
+                                                <div class="product-quantity">
+                                                    quantity:<span id="getquintity"></span>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="FoodCart" id="Food">
+                                            <img src="img/ratatouille.jpg" alt="" class="cart-img">
+                                            <div class="detail-box">
+                                                <div class="product-title">
+                                                    Shrimp Scampi
+
+                                                </div>
+                                                <div class="product-quantity">
+                                                    quantity: 100
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="FoodCart" id="Food">
+                                            <img src="img/choclate.jpg" alt="" class="cart-img">
+                                            <div class="detail-box">
+                                                <div class="product-title">
+                                                    Choclate cake
+
+                                                </div>
+                                                <div class="product-quantity">
+                                                    quantity: 10
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="FoodCart" id="Food">
+                                            <img src="img/choclate.jpg" alt="" class="cart-img">
+                                            <div class="detail-box">
+                                                <div class="product-title">
+                                                    <span id="title">Choclate cake</span>
+
+                                                </div>
+                                                <div class="product-quantity">
+                                                    quantity: <span id="quantity">10</span>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+
+
+                                    </div>
+
+
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="addMenu">
+
+                    <div class="cardadd shop-content">
+
+                        <div class="addfood">
+                            <h2>Add new food</h2>
+                            <div class="addicon">
+                                <img class="addimg" src="img/add.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shop-content">
+                        <img src="img/3.png" alt="Photo 1" class="product-img">
+                        <h3 class="product-title">food_name</h3>
+                        <p class="price" id="prix">265DA
+                            You Have:5 quintety
+                        </p>
+                        <div class="carde bottomButtons">
+
+                            <button class="deletButton buttonss" onclick="deleteFood(this)">
+                                <span class="material-symbols-outlined iconDelet">delete</span>Remove
+                            </button>
+                            <button class="motifeButton buttonss">
+                                <span class="material-symbols-outlined iconModify">
+                                    edit
+                                </span>
+                                modify
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card shop-content">
+                        <img src="img/ratatouille.jpg" alt="Photo 1" class="product-img">
+                        <h3 class="product-title">Add Some Food</h3>
+                        <p class="price" id="prix"></p>
+                        <div class="bottomButtons">
+
+
+
+                        </div>
+                    </div>
+
+
+
+                    <script>
+                        function deleteFood(button) {
+                            var card = button.closest('.carde');
+                            var foodId = card.getAttribute('data-id');
+                            document.getElementById('hiddenInput').value = foodId;
+                        }
+                    </script>
+
+
+
+
+                </div>
+
+
+
+
+
+                <div class="reservationTable">
+
+                    <div class="table-container">
+                        <div class="head">
+
+                            <h2>Reservation</h2>
+                        </div>
+                        <table class="orders-table">
+                            <thead class="headTable">
+                                <tr>
+
+                                    <th>Customer</th>
+                                    <th>Email</th>
+                                    <th>Reservation Date</th>
+                                    <th>Reservation Time</th>
+                                    <th>Number of Guests</th>
+
+                                </tr>
+                            </thead>
+                            <tbody class="bodyTable">
+                                <tr>
+                                </tr>
+                                <tr class="reservecostumer" onclick="InfoReserv(this);">
+
+                                    <td>
+                                        <span class="Fullname"></span>
+                                        <span class="dateResirve"></span>
+                                        <span class="hourReserv"></span>
+                                        <span class="parti_size"></span>
+                                        <span class="getemail"></span>
+                                        <span class="Reservephone"></span>
+                                        <span class="special_requests"></span>
+
+
+                                        <img src="img/about-1.jpg">
+                                    </td>
+                                    <td>email</td>
+                                    <td>reservation_date; ?></td>
+                                    <td><span class="status shipped">Time; ?></span></td>
+                                    <td>20 guests</td>
+
+                                </tr>
+                                <tr class="reservecostumer">
+
+                                    <td><img src="img/photo profile.jpg">raouf bh</td>
+                                    <td>bouhadjraoufbh@gmail.com</td>
+                                    <td>25 May, 2022</td>
+                                    <td><span class="status delivered">18:30</span></td>
+                                    <td>2 guests</td>
+
+                                </tr>
+                                <tr class="reservecostumer">
+
+                                    <td><img src="img/photo profile.jpg">raouf</td>
+                                    <td>bouhadjaraouf1@gmail.com</td>
+                                    <td>27 JUIN, 2029</td>
+                                    <td><span class="status delivered">10:00</span></td>
+                                    <td>2 guests</td>
+
+                                </tr>
+                                <tr class="reservecostumer">
+
+                                    <td><img src="img/photo profile.jpg"> Raouf bh</td>
+                                    <td>bouhadjaraouf1@gmail.com</td>
+                                    <td>25 May, 2023</td>
+                                    <td><span class="status delivered">12:30</span></td>
+                                    <td>4 guests</td>
+
+                                </tr>
+                                <tr class="reservecostumer">
+
+                                    <td><img src="img/photo profile.jpg">raouf bh</td>
+                                    <td>bouhadjaraouf1@gmail.com</td>
+                                    <td>25 May, 2023</td>
+                                    <td><span class="status delivered">11:00</span></td>
+                                    <td>2 guests</td>
+
+                                </tr>
+                                <tr class="reservecostumer">
+
+                                    <td><img src="img/photo profile.jpg">raouf bh</td>
+                                    <td>bouhadjaraouf1@gmail.com</td>
+                                    <td>25 May, 2023</td>
+                                    <td><span class="status delivered">15:00</span></td>
+                                    <td>2 guests</td>
+
+                                </tr>
+                                <tr class="reservecostumer">
+
+                                    <td><img src="img/photo profile.jpg">raouf bh</td>
+                                    <td>bouhadjaraouf1@gmail.com</td>
+                                    <td>25 May, 2023</td>
+                                    <td><span class="status delivered">18:30</span></td>
+                                    <td>5 guests</td>
+
+                                </tr>
+                                <tr class="reservecostumer">
+
+                                    <td><img src="img/photo profile.jpg"> raouf bh</td>
+                                    <td>braoufbh@gmail.com</td>
+                                    <td>25 May, 2023</td>
+                                    <td><span class="status delivered">20:00</span></td>
+                                    <td>6 guests</td>
+
+                                </tr>
+                                <tr class="reservecostumer">
+
+                                    <td><img src="img/photo profile.jpg"> raouf bh</td>
+                                    <td>raoufbh@gmail.com</td>
+                                    <td>25 May, 2023</td>
+                                    <td><span class="status delivered">21:30</span></td>
+                                    <td>2 guests</td>
+
+                                </tr>
+                                <tr class="reservecostumer">
+
+                                    <td><img src="img/photo profile.jpg">raouf bh</td>
+                                    <td>raoufbh1@gmail.com</td>
+                                    <td>25 May, 2023</td>
+                                    <td><span class="status delivered">22:00</span></td>
+                                    <td>2 guests</td>
+
+                                </tr>
+                                <tr class="reservecostumer">
+
+                                    <td><img src="img/photo profile.jpg"> raouf bh</td>
+                                    <td>raoufbh@gmail.com</td>
+                                    <td>25 May, 2023</td>
+                                    <td><span class="status delivered">17:30</span></td>
+                                    <td>2 guests</td>
+
+                                </tr> -->
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+
+                    <div id="reservationModal" class="modalreservation">
+                        <div class="reservedetails">
+                            <div class="headreserve">
+                                <div class="closereserve">
+                                    <span class="material-symbols-outlined" id="close-cart">
+                                        close
+                                    </span>
+                                </div>
+
+                                <div class="titlereserveD">
+                                    <h3 class="titleresrve">Reservation Details</h3>
+                                </div>
+
+                            </div>
+                            <div class="reserve-body">
+                                <div class="reserveNameCustomer">
+                                    <p class="reserveFullName">Full Name : <span class="reserveNameInfo" id="reserveNameInfo"></span></p>
+
+                                </div>
+                                <div class="reserveDate">
+                                    <p class="reservedate">Reservation Date : <span class="reservedateInfo" id="reservedateInfo"></span></p>
+
+                                </div>
+                                <div class="reserveTime">
+                                    <p class="reservetime">Reservation Time : <span class="reservetimeInfo" id="reservetimeInfo"></span></p>
+
+                                </div>
+                                <div class="reserveGuests">
+                                    <p class="reserveguests">Number of Guests : <span class="reserveguestsInfo" id="reserveguestsInfo"></span></p>
+
+                                </div>
+
+                                <div class="reserveEmailCustomer">
+                                    <p class="reserveEmail">Email : <span class="reserveEmailInfo" id="reserveEmailInfo"></span></p>
+
+                                </div>
+                                <div class="reservePhoneCustomer">
+                                    <p class="reservePhone">Phone : <span class="reservePhoneInfo" id="reservePhoneInfo"></span></p>
+
+                                </div>
+                                <div class="reservePhoneCustomer">
+                                    <p class="reservePhone">Gift Code : <span class="reservecodeInfo" id="Code"> </span></p>
+
+                                </div>
+
+
+                                <div class="reserveCommentCustomer">
+                                    <p class="reserveComment">Comments, Allergies : <span class="reserveCommentInfo" id="reserveCommentInfo"> </span></p>
+
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+            <div class="addMenu">
+
+                <div class="cardadd shop-content">
+
+                    <div class="addfood">
+                        <h2>Add new food</h2>
+                        <div class="addicon">
+                            <img class="addimg" src="img/add.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shop-content">
+                    <img src="img/Beef Stew.jpg" alt="Photo 1" class="product-img">
+                    <h3 class="product-title">Beef Stew</h3>
+                    <p class="price" id="prix">2000 DA</p>
+                    <div class="bottomButtons">
+
+                        <button class="deletButton buttonss">
+                            <span class="material-symbols-outlined iconDelet">delete</span>Remove
+                        </button>
+                        <button class="motifeButton buttonss">
+                            <span class="material-symbols-outlined iconModify">
+                                edit
+                            </span>
+                            modify
+                        </button>
+
+                    </div>
+
+                </div>
+                <div class="card shop-content">
+                    <img src="img/Chicken Curry2.jpg" alt="Photo 1" class="product-img">
+                    <h3 class="product-title">Chicken Curry</h3>
+                    <p class="price" id="prix">1500 DA</p>
+                    <div class="bottomButtons">
+
+                        <button class="deletButton buttonss">
+                            <span class="material-symbols-outlined iconDelet">delete</span>Remove
+                        </button>
+                        <button class="motifeButton buttonss">
+                            <span class="material-symbols-outlined iconModify">
+                                edit
+                            </span>
+                            modify
+                        </button>
+
+                    </div>
+
+                </div>
+                <div class="card shop-content">
+                    <img src="img/ratatouille.jpg" alt="Photo 1" class="product-img">
+                    <h3 class="product-title">ratatouille</h3>
+                    <p class="price" id="prix">1500 DA</p>
+                    <div class="bottomButtons">
+
+                        <button class="deletButton buttonss">
+                            <span class="material-symbols-outlined iconDelet">delete</span>Remove
+                        </button>
+                        <button class="motifeButton buttonss">
+                            <span class="material-symbols-outlined iconModify">
+                                edit
+                            </span>
+                            modify
+                        </button>
+
+                    </div>
+                </div>
+                <div class="card  shop-content">
+                    <img src="img/Cake au Chocolat.jpg" alt="Photo 1" class="product-img" draggable="false">
+                    <h3 class="product-title">Chocolate cake</h3>
+                    <p class="price" id="prix">2500 DA</p>
+                    <div class="bottomButtons">
+
+                        <button class="deletButton buttonss">
+                            <span class="material-symbols-outlined iconDelet">delete</span>Remove
+                        </button>
+                        <button class="motifeButton buttonss">
+                            <span class="material-symbols-outlined iconModify">
+                                edit
+                            </span>
+                            modify
+                        </button>
+
+                    </div>
+                </div>
+                <div class="card shop-content">
+                    <img src="img/Lamb Curry.jpg" alt="Photo 1" class="product-img">
+                    <h3 class="product-title">Lamb Curry</h3>
+                    <p class="price" id="prix">1500 DA</p>
+                    <div class="bottomButtons">
+
+                        <button class="deletButton buttonss">
+                            <span class="material-symbols-outlined iconDelet">delete</span>Remove
+                        </button>
+                        <button class="motifeButton buttonss">
+                            <span class="material-symbols-outlined iconModify">
+                                edit
+                            </span>
+                            modify
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="reservationTable active">
+
+                <div class="table-container">
+                    <div class="head">
+                        <h2>Reservation</h2>
+                    </div>
+                    <table class="orders-table">
+                        <thead class="headTable">
+                            <tr>
+
+                                <th>Customer</th>
+                                <th>Email</th>
+                                <th>Reservation Date</th>
+                                <th>Reservation Time</th>
+                                <th>Number of Guests</th>
+
+                            </tr>
+                        </thead>
+                        <tbody class="bodyTable">
+                            <tr>
+                            </tr>
+                            <tr class="reservecostumer">
+
+                                <td><img src="img/photo profile.jpg"> raouf bh</td>
+                                <td>bouhadjaraouf1@gmail.com</td>
+                                <td>14 Mar, 2024</td>
+                                <td><span class="status shipped">9:30</span></td>
+                                <td>2 guests</td>
+
+                            </tr>
+
+
+                            <tr class="reservecostumer">
+
+                                <td><img src="img/photo profile.jpg">raouf bh</td>
+                                <td>bouhadjraoufbh@gmail.com</td>
+                                <td>25 May, 2022</td>
+                                <td><span class="status delivered">18:30</span></td>
+                                <td>2 guests</td>
+
+                            </tr>
+                            <tr class="reservecostumer">
+
+                                <td><img src="img/photo profile.jpg">raouf</td>
+                                <td>bouhadjaraouf1@gmail.com</td>
+                                <td>27 JUIN, 2029</td>
+                                <td><span class="status delivered">10:00</span></td>
+                                <td>2 guests</td>
+
+                            </tr>
+                            <tr class="reservecostumer">
+
+                                <td><img src="img/photo profile.jpg"> Raouf bh</td>
+                                <td>bouhadjaraouf1@gmail.com</td>
+                                <td>25 May, 2023</td>
+                                <td><span class="status delivered">12:30</span></td>
+                                <td>4 guests</td>
+
+                            </tr>
+                            <tr class="reservecostumer">
+
+                                <td><img src="img/photo profile.jpg">raouf bh</td>
+                                <td>bouhadjaraouf1@gmail.com</td>
+                                <td>25 May, 2023</td>
+                                <td><span class="status delivered">11:00</span></td>
+                                <td>2 guests</td>
+
+                            </tr>
+                            <tr class="reservecostumer">
+
+                                <td><img src="img/photo profile.jpg">raouf bh</td>
+                                <td>bouhadjaraouf1@gmail.com</td>
+                                <td>25 May, 2023</td>
+                                <td><span class="status delivered">15:00</span></td>
+                                <td>2 guests</td>
+
+                            </tr>
+                            <tr class="reservecostumer">
+
+                                <td><img src="img/photo profile.jpg">raouf bh</td>
+                                <td>bouhadjaraouf1@gmail.com</td>
+                                <td>25 May, 2023</td>
+                                <td><span class="status delivered">18:30</span></td>
+                                <td>5 guests</td>
+
+                            </tr>
+                            <tr class="reservecostumer">
+
+                                <td><img src="img/photo profile.jpg"> raouf bh</td>
+                                <td>braoufbh@gmail.com</td>
+                                <td>25 May, 2023</td>
+                                <td><span class="status delivered">20:00</span></td>
+                                <td>6 guests</td>
+
+                            </tr>
+                            <tr class="reservecostumer">
+
+                                <td><img src="img/photo profile.jpg"> raouf bh</td>
+                                <td>raoufbh@gmail.com</td>
+                                <td>25 May, 2023</td>
+                                <td><span class="status delivered">21:30</span></td>
+                                <td>2 guests</td>
+
+                            </tr>
+                            <tr class="reservecostumer">
+
+                                <td><img src="img/photo profile.jpg">raouf bh</td>
+                                <td>raoufbh1@gmail.com</td>
+                                <td>25 May, 2023</td>
+                                <td><span class="status delivered">22:00</span></td>
+                                <td>2 guests</td>
+
+                            </tr>
+                            <tr class="reservecostumer">
+
+                                <td><img src="img/photo profile.jpg"> raouf bh</td>
+                                <td>raoufbh@gmail.com</td>
+                                <td>25 May, 2023</td>
+                                <td><span class="status delivered">17:30</span></td>
+                                <td>2 guests</td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+                <div id="reservationModal" class="modalreservation">
+                    <div class="reservedetails">
+                        <div class="headreserve">
+                            <div class="closereserve">
+                                <span class="material-symbols-outlined" id="close-cart">
+                                    close
+                                </span>
+                            </div>
+
+                            <div class="titlereserveD">
+                                <h3 class="titleresrve">Reservation Details</h3>
+                            </div>
+
+                        </div>
+                        <div class="reserve-body">
+                            <div class="reserveNameCustomer">
+                                <p class="reserveFullName">Full Name : <span class="reserveNameInfo" id="FullName">BOUHADJA Abderraouf</span></p>
+
+                            </div>
+                            <div class="reserveDate">
+                                <p class="reservedate">Reservation Date : <span class="reservedateInfo" id="FullName">14 Mar, 2024</span></p>
+
+                            </div>
+                            <div class="reserveTime">
+                                <p class="reservetime">Reservation Time : <span class="reservetimeInfo" id="FullName">9:30h</span></p>
+
+                            </div>
+                            <div class="reserveGuests">
+                                <p class="reserveguests">Number of Guests : <span class="reserveguestsInfo" id="FullName">2 guests</span></p>
+
+                            </div>
+
+                            <div class="reserveEmailCustomer">
+                                <p class="reserveEmail">Email : <span class="reserveEmailInfo" id="email">bouhadjaraouf1@gmail.com </span></p>
+
+                            </div>
+                            <div class="reservePhoneCustomer">
+                                <p class="reservePhone">Phone : <span class="reservePhoneInfo" id="Phone">+213656923827</span></p>
+
+                            </div>
+                            <div class="reservePhoneCustomer">
+                                <p class="reservePhone">Gift Code : <span class="reservecodeInfo" id="Code"> 12763
+                                    </span></p>
+
+                            </div>
+
+
+                            <div class="reserveCommentCustomer">
+                                <p class="reserveComment">Comments, Allergies : <span class="reserveCommentInfo" id="Comment"> 586 loG B 2skikdas 50 log B 2skikdas kikda </span></p>
+
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+    <div class="newfood">
+
+        <form class="formfood">
+            <div class="headfoodform">
+                <div class="closefood">
+                    <span class="material-symbols-outlined" id="close-cart">
+                        close
+                    </span>
+                </div>
+
+                <div class="titlemfood">
+                    <h3 class="titleres">Add new food</h3>
+                </div>
+
+
+
+            </div>
+
+            <div class="bfoodform">
+
+                <div class="inputimg">
+                    <label for="input-file" id="drop-area">
+                        <input type="file" name="food_img" accept="img/*" id="input-file" required="" hidden="">
+
+                        <div class="img-view" id="img-view">
+                            <img src="img/download (3).png">
+                            <p>
+                                Click here to upload image
+                            </p>
+                        </div>
+
+                    </label>
+                </div>
+
+                <div class="boxtitle">
+                    <label class="titlelabel">Name</label>
+                    <div class="iconf">
+
+                        <input class="name inputF" type="text" id="title" name="food_name" maxlength="40" placeholder="Name of food" required="">
+                    </div>
+                </div>
+                <div class="boxpq">
+                    <div>
+                        <label class="inflabel">Price</label>
+                        <div class="iconf">
+                            <input class="name inputT" type="number" id="prix" name="prix" placeholder="price of food" required="">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="inflabel">Quantity</label>
+                        <div class="iconf">
+
+                            <input class="name inputT" type="number" id="quant" name="quant" placeholder="Quantity of the food" required="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="typefood">
+
+
+                    <div>
+                        <label class="inflabel">Type</label>
+                        <div class="iconf">
+                            <select class="name inputype" id="fname" name="type" aria-placeholder="Type" required="">
+                                <option>Lunch</option>
+                                <option>Breakfast</option>
+                                <option>Dinner</option>
+                                <option>Pizza</option>
+                                <option>Burger</option>
+                                <option>French cuisine</option>
+                                <option>American cuisine</option>
+
+                            </select>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="ingfood">
+
+
+                    <div>
+                        <label class="inglabel">Ingredients of food</label>
+                        <div class="icont">
+                            <textarea class="inginput" name="description" placeholder="Ingredients of food" required=""></textarea>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="addfButton">
+                    <input type="hidden" name="resturant_id" value="">
+                    <button class="buttonadd" name="add_food" type="submit">Add food</button>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+
+
+
+    <div class="ConfirmDelet">
+
+        <div class="DeletFood">
+            <div class="headDelet">
+                <div class="titlemfood">
+                    <span class="material-symbols-outlined DeletForever">
+                        delete_forever
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="ConfirmMessage">
+                <h3>Delet this food</h3>
+                <h5>Are you sure you want to delete this food?</h5>
+
+            </div>
+            <div class="bottomConfirm">
+                <form>
+                    <input type="hidden" id="hiddenInput" name="foodId">
+                    <input type="hidden" name="restu_id" value="">
+                    <button type="submit" name="deletfood" class="ConfimationButton buttonsDelet">
+                        Delet
+                    </button>
+                </form>
+                <button class="cancelButton buttonss">
+
+                    Cancel
+                </button>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+    <script src="java.js"></script>
+
+
+
+</body>
+
+</html>
